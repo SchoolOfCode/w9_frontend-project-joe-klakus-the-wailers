@@ -3,7 +3,8 @@ import React from 'react'
 const Main = () => {
     return (
         <div>
-            <p>Main front end page</p>
+            
+
         </div>
     )
 }
