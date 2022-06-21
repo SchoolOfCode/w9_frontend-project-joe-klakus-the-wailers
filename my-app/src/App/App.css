@@ -115,6 +115,9 @@
   transition: all var(--transition-time);
   cursor: pointer;
   margin: 15px;
+
+
+
 }
 .inputclass{
   font-weight: bold;
