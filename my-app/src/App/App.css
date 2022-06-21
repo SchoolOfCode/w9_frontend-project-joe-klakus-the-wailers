@@ -14,7 +14,14 @@
   
 }
 .green-button{
-  color: #0B6E4F
+  background: #0B6E4F
+  width: 220px;
+  height: 48px;
+
+}
+
+.orange-button{
+  background: #FA9F42
 }
 .header{
   display: inline-flex;
