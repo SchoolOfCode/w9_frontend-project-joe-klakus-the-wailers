@@ -1,6 +1,7 @@
 
 import './App.css';
 import Login from '../Login';
+import CreateUser from '../CreateUser';
 import { useState } from 'react';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <div className="App">
-    <Login text=""/>
+    {/* <Login text=""/> */}
+    <CreateUser text=""/>
     </div>
   );
 }
