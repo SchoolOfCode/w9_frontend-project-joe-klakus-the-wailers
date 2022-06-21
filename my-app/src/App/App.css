@@ -1,9 +1,32 @@
 .App {
   text-align: center;
+  font-family: 'Bitter', serif;
+}
+.h1-styling{
+  font-size: 3vmin;
+}
+.forgotten-password-link{
+  color: #D62828;
+  
+}
+.forgotten-password-link:visited{
+  color: #7A1616;
+  
+}
+.green-button{
+  color: #0B6E4F
+}
+.header{
+  display: inline-flex;
+  align-items: center;
+}
+.our-logo {
+  height: 10vmin;
+  pointer-events: none;
 }
 
-.App-logo {
-  height: 40vmin;
+.profile-icon {
+  height: 4vmin;
   pointer-events: none;
 }
 
