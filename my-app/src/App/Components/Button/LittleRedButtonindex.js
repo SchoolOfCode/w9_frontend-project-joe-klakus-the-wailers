@@ -1,4 +1,3 @@
-import { useState } from "react";
 // import "./button.css";
 
 function LittleRedButton({ handleClick, buttonText }) {

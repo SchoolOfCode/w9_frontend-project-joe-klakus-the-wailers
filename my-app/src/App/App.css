@@ -102,6 +102,25 @@
 
 }
 
+.little-red-button{
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-red);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--white);
+  text-align: center;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 30vmin;
+  height: 7vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  margin: 15px;
+}
 /* ------------------------------------------------------------- */
 
 

@@ -2,6 +2,8 @@ import './App.css';
 import Login from '../Login';
 import CreateUser from '../CreateUser';
 import CreateEvent from '../CreateEvent';
+import ProfilePage from '../ProfilePage';
+import ProfilePageLocked from '../ProfilePage/lockedprofileIndex';
 import { useState } from 'react';
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
     <div className="App">
     <Login text=""/>  
     <CreateUser text=""/> 
-    <CreateEvent text=""/>
+    <CreateEvent text=""/> 
+    <ProfilePage text=""/> 
+    <ProfilePageLocked text=""/>
     </div>
   );
 }
