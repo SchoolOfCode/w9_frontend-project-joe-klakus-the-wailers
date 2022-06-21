@@ -32,7 +32,7 @@ function FormInput(props) {
   }
   return (
     <>
-      <input type={inputType} value={inputValue} name="input-form" onChange={handleChange} className="inputclass"/>
+      <input type={inputType} value={inputValue} name="input-form" onChange={handleChange} className="inputclass" placeholder={props.placeholder}/>
     </>
   );
 }
