@@ -1,35 +1,156 @@
+:root{
+  --primary-blue: #003049;
+  --primary-green: #0B6E4F;
+  --primary-orange: #FA9F42;
+  --primary-red: #D62828;
+  --secondary-red:#7A1616;
+  --primary-grey: #E0E0E2;
+  --font: 'Bitter', serif;
+  --transition-time: 0,2s;
+}
+
+#guest-login-prompt{
+  font-family: var(--font);
+  font-size: 2.5vmin;
+  color: var(--primary-blue);
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+.login-inputs{
+  display: inline-block;
+  justify-content: flex-start;
+  /* background-color: #61dafb; */
+}
+
 .App {
   text-align: center;
-  font-family: 'Bitter', serif;
+  font-family: var(--font);
+  
 }
 .h1-styling{
-  font-size: 3vmin;
+  font-size: 7vmin;
+  color: var(--primary-blue);
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
 }
 .forgotten-password-link{
-  color: #D62828;
+  font-family: var(--font);
+  font-size: 2.5vmin;
+  color: var(--primary-red);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
   
 }
 .forgotten-password-link:visited{
-  color: #7A1616;
-  
+  font-family: var(--font);
+  font-size: 2.5vmin;
+  color:var(--secondary-red);
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
 }
 .green-button{
-  background: #0B6E4F
-  width: 220px;
-  height: 48px;
-
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-green);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-grey);
+  text-align: center;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 60vmin;
+  height: 7vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  margin: 15px;
 }
 
 .orange-button{
-  background: #FA9F42
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-orange);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  text-align: center;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 60vmin;
+  height: 7vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  margin: 15px;
 }
+
+.red-button{
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-red);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-grey);
+  text-align: center;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 60vmin;
+  height: 7vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  margin: 15px;
+}
+.inputclass{
+  font-weight: bold;
+  font-family: var(--font);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  border: 4px double var(--primary-blue);
+  font-size: 4vmin;
+  padding: 2vmin;
+  width: 75vmin;
+  height: 4vmin;
+  margin: 15px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
 .header{
   display: inline-flex;
   align-items: center;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
 }
 .our-logo {
-  height: 10vmin;
+  height: 19vmin;
   pointer-events: none;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  transition: all 0.2s;
 }
 
 .profile-icon {
