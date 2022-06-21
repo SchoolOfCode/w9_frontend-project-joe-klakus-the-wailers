@@ -9,8 +9,8 @@ function App() {
 
   return (
     <div className="App">
-    {/* <Login text=""/> 
-    <CreateUser text=""/> */}
+    <Login text=""/>  
+    <CreateUser text=""/> 
     <CreateEvent text=""/>
     </div>
   );

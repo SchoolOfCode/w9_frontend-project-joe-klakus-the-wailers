@@ -1,3 +1,6 @@
+
+/* VARIABLES */
+
 :root{
   --primary-blue: #003049;
   --primary-green: #0B6E4F;
@@ -7,29 +10,23 @@
   --primary-grey: #E0E0E2;
   --font: 'Bitter', serif;
   --transition-time: 0,2s;
+  --white: white;
+
 }
 
-#guest-login-prompt{
-  font-family: var(--font);
-  font-size: 2.5vmin;
-  color: var(--primary-blue);
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
-}
-
-.login-inputs{
-  display: inline-block;
-  justify-content: flex-start;
-  /* background-color: #61dafb; */
-}
+/* ------------------------------------------------------------- */
+/* APP STYLING */
 
 .App {
   text-align: center;
   font-family: var(--font);
   
 }
+
+/* ------------------------------------------------------------- */
+
+/* ALL HEADING STYLING */
+
 .h1-styling{
   font-size: 7vmin;
   color: var(--primary-blue);
@@ -38,32 +35,17 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
 }
-.forgotten-password-link{
-  font-family: var(--font);
-  font-size: 2.5vmin;
-  color: var(--primary-red);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  
-}
-.forgotten-password-link:visited{
-  font-family: var(--font);
-  font-size: 2.5vmin;
-  color:var(--secondary-red);
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
-}
+
+/* ------------------------------------------------------------- */
+
+/* ALL PRIMARY BUTTON STYLING */
 .green-button{
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-green);
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-grey);
+  color: var(--white);
   text-align: center;
   font-size: 3vmin;
   padding: 2vmin;
@@ -103,7 +85,7 @@
   background: var(--primary-red);
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-grey);
+  color: var(--white);
   text-align: center;
   font-size: 3vmin;
   padding: 2vmin;
@@ -116,8 +98,53 @@
   cursor: pointer;
   margin: 15px;
 }
+
+/* ------------------------------------------------------------- */
+
+
+/* LOGIN PAGE STYLING */
+
+#guest-login-prompt{
+  font-family: var(--font);
+  font-size: 2.5vmin;
+  color: var(--primary-blue);
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+.login-inputs{
+  display: inline-block;
+  justify-content: flex-start;
+  /* background-color: #61dafb; */
+}
+
+
+.forgotten-password-link{
+  font-family: var(--font);
+  font-size: 2.5vmin;
+  color: var(--primary-red);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  
+}
+.forgotten-password-link:visited{
+  font-family: var(--font);
+  font-size: 2.5vmin;
+  color:var(--secondary-red);
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+/* ------------------------------------------------------------- */
+/* TEXT INPUT STYLING (PRIMARY) */
+
 .inputclass{
-  font-weight: bold;
+  
   font-family: var(--font);
   display: inline-block;
   border-radius: 10px;
@@ -135,6 +162,40 @@
   transition: all var(--transition-time);
 }
 
+/* ------------------------------------------------------------- */
+/* CREATE USER STYLING (<P>) */
+
+.create-account-styling{
+  font-weight: bold;
+  font-family: var(--font);
+  font-size: 4vmin;
+  text-align: start;
+  padding: left 5vmin;
+  color: var(--primary-blue);
+}
+
+.large-text-input{
+  font-family: var(--font);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  border: 4px double var(--primary-blue);
+  font-size: 4vmin;
+  padding: 2vmin;
+  width: 75vmin;
+  height: 55vmin;
+  margin: 15px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+
+
+/* ------------------------------------------------------------- */
+
 .header{
   display: inline-flex;
   align-items: center;
@@ -143,6 +204,9 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
 }
+
+/* ------------------------------------------------------------- */
+
 .our-logo {
   height: 19vmin;
   pointer-events: none;
@@ -153,16 +217,49 @@
   transition: all 0.2s;
 }
 
+/* ------------------------------------------------------------- */
+/* PROFILE ICON */
+
 .profile-icon {
-  height: 4vmin;
-  pointer-events: none;
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-green);
+  display: inline-block;
+  border-radius: 100px;
+  color: var(--white);
+  text-align: center;
+  font-size: 8vmin;
+  padding: 2vmin;
+  width: 10vmin;
+  height: 10vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  margin: 10px;
 }
+
+
+/* ------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
+
+
+/* ------------------------------------------------------------- */
+
+
+
+
+
+
+
 
 .App-header {
   background-color: #282c34;
