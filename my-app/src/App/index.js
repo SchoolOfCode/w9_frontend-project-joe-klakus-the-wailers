@@ -29,5 +29,3 @@ function App() {
 
 export default App;
 
-Pushing tEST cOMMENT anothe rcomment
-
