@@ -23,8 +23,8 @@ return (
   <Route index element={isLoggedIn ? <Login onClickLogin={toggleLogin} text=""/>: <MainPage></MainPage>}/>
   <Route path="/newu" element={<CreateUser text=""/> }></Route>
   <Route path="/newe" element={<CreateEvent text=""/> }></Route>
-  {/* <ProfilePage text=""/> 
-  <ProfilePageLocked text=""/> */}
+  <Route path="/updateu" element={<ProfilePage text=""/> }></Route>
+  {/* <ProfilePageLocked text=""/> */} */}
   </Routes>
   </BrowserRouter>
   </div>
