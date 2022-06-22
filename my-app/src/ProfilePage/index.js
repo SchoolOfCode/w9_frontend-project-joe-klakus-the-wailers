@@ -1,5 +1,5 @@
 import React from 'react'
-import LittleRedButton from '../App/Components/Button/LittleRedButtonIndex.js'
+import LittleRedButton from '../App/Components/Button/LittleRedButtonindex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 
 const ProfilePage = () => {

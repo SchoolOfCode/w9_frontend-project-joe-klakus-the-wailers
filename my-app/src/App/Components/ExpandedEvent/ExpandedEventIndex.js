@@ -1,6 +1,5 @@
 import React from 'react'
-
-import LittleGreenButton from '../Button/LittleGreenButtonIndex'
+import LittleGreenButton from '../Button/LittleGreenButtonIndex.js'
 import TinyGreenButton from '../Button/TinyGreenButtonIndex'
 import TinyRedButton from '../Button/TinyRedButtonIndex'
 

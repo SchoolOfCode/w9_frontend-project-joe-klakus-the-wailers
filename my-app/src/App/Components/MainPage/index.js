@@ -2,9 +2,10 @@ import React from 'react'
 import GreenButton from '../Button/GreenButtonIndex'
 import FormInput from '../InputTypeText/Input-Index'
 import OrangeButton from '../Button/OrangeButtonIndex'
-import LittleRedButton from '../Button/LittleRedButtonIndex'
+import LittleRedButton from '../Button/LittleRedButtonindex.js'
 import ExpandedEvent from '../ExpandedEvent/ExpandedEventIndex'
 import Map from '../map/map2.js'
+import LittleGreenButton from '../Button/LittleGreenButtonIndex'
 
 const MainPage = () => {
     return (

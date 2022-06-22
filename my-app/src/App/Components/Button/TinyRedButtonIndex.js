@@ -8,4 +8,4 @@ function TinyRedButton({ handleClick, buttonText }) {
         </button>
     );
   }
-  export default TinyRedButton;
+  export default TinyRedButton
