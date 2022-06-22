@@ -24,6 +24,7 @@ return (
   <Route path="/newu" element={<CreateUser text=""/> }></Route>
   <Route path="/newe" element={<CreateEvent text=""/> }></Route>
   <Route path="/updateu" element={<ProfilePage text=""/> }></Route>
+  <Route path="/main" element={<MainPage text=""/> }></Route>
   {/* <ProfilePageLocked text=""/> */} 
   </Routes>
   </BrowserRouter>
