@@ -27,17 +27,17 @@ const submitEvent = async () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name_of_event: "Brum JS",
+        name_of_event: inputValue.name_of_event, /// Some values are hardcoded need to fix later
         event_host: 1,
         start_time: "2004-10-19T09:23:54.000Z",
         end_time: "2004-10-19T12:23:54.000Z",
-        description: "Meetup for Everyone",
-        cost: 0,
-        house_number: "custard factory",
-        street_address: "birmingham",
-        town: "birmingham",
-        region: "birmingham",
-        postcode: "birmingham",
+        description: inputValue.description,
+        cost: inputValue.cost,
+        house_number: inputValue.house_number,
+        street_address: inputValue.street_address,
+        town: inputValue.town,
+        region: inputValue.region,
+        postcode: inputValue.postcode,
         lat: 51.5073509,
         long: -0.1277583,
         userAttending: 1
