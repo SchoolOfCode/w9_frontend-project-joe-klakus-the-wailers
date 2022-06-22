@@ -14,7 +14,7 @@ const Login = ({onClickLogin}) => {
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
         {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
         </header>
-        
+        <br></br>
            <div className='login-inputs'> 
            <h1 className="h1-styling">Username</h1>
            <FormInput name="username-input" />
