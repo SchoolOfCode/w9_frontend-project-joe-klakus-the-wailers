@@ -4,6 +4,33 @@ import GreenButton from '../App/Components/Button/GreenButtonIndex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 
 const CreateUser = () => {
+
+  async function submitUser(){
+    // console.log("This works")
+    
+  
+  (async () => {
+    const response = await fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({first_name: "New Person",
+      last_name: "Green",
+      email: "dos@hotmail.com",
+      password: "password",
+      house_number: "birmingham",
+      street_address: "birmingham",
+      town: "birmingham",
+      region: "birmingham",
+      postcode: "birmingham"})
+    });
+    const content = await response.json();
+  
+    console.log(content);
+  })();
+}
     return (
         <div>
 
@@ -37,7 +64,7 @@ const CreateUser = () => {
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
            <br></br>
-           <GreenButton className="green-button" buttonText={"Create User"}/>
+           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Create User"} />
 
          </div>
         </div>
