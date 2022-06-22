@@ -18,15 +18,16 @@ function App() {
 //comment here
 return (
   <div className="app">
-  <BrowserRouter>
+  {/* <BrowserRouter>
   <Routes>
   <Route index element={isLoggedIn ? <Login onClickLogin={toggleLogin} text=""/>: <MainPage></MainPage>}/>
   <Route path="/newu" element={<CreateUser text=""/> }></Route>
-  <Route path="/newe" element={<CreateEvent text=""/> }></Route>
+  <Route path="/newe" element={<CreateEvent text=""/> }></Route> */}
   {/* <ProfilePage text=""/> 
   <ProfilePageLocked text=""/> */}
-  </Routes>
-  </BrowserRouter>
+  {/* </Routes>
+  </BrowserRouter> */}
+  <MainPage/>
   </div>
 );
 }
