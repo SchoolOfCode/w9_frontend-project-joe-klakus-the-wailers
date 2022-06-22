@@ -26,7 +26,10 @@ function FormInput(props) {
   const [inputValue, setInputValue] = useState('')
 
   function handleChange(event){
-    setInputValue(event.target.value);
+    setInputValue({
+      ...inputValue,
+      [event.target.name]: event.target.value
+    });
     console.log(inputValue)
     if(props.onChange) props.onChange(inputValue)
   }
