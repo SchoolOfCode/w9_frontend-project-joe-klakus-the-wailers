@@ -2,8 +2,20 @@ import React from 'react'
 import OrangeButton from '../App/Components/Button/OrangeButtonIndex'
 import GreenButton from '../App/Components/Button/GreenButtonIndex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
+import { useState } from 'react';
 
 const CreateUser = () => {
+
+  const [inputValue, setInputValue] = useState([{}])
+
+  function handleChange(event){
+    setInputValue({
+      ...inputValue,
+      [event.target.name]: event.target.value
+  });
+    console.log(inputValue)
+
+  }
 
   async function submitUser(){
     // console.log("This works")
@@ -16,15 +28,16 @@ const CreateUser = () => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({first_name: "New Person",
-      last_name: "Green",
-      email: "dos@hotmail.com",
-      password: "password",
-      house_number: "birmingham",
-      street_address: "birmingham",
-      town: "birmingham",
-      region: "birmingham",
-      postcode: "birmingham"})
+      body: JSON.stringify({
+      first_name: inputValue.first_name,
+      last_name: inputValue.last_name,
+      email: inputValue.email,
+      password: inputValue.password,
+      house_number: inputValue.house_number,
+      street_address: inputValue.street_address,
+      town: inputValue.town,
+      region: inputValue.region,
+      postcode: inputValue.postcode})
     });
     const content = await response.json();
   
@@ -43,23 +56,23 @@ const CreateUser = () => {
 
            <h1 className="h1-styling">Create Account</h1>
            <p className="create-account-styling" >First Name:</p>
-           <FormInput name="username-input" placeholder='Enter your First Name'/>
+           <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name'/>
            <p className="create-account-styling" >Surname:</p>
-           <FormInput name="username-input" placeholder='Enter your Surname'/>
+           <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname'/>
            <p className="create-account-styling">Email Address:</p>
-           <FormInput name="username-input" placeholder="Enter your Email Address" />
+           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Email Address" />
            <p className="create-account-styling">Password:</p>
-           <FormInput name="username-input" placeholder="Enter a Password" />
+           <FormInput handleChange={handleChange} name="password" placeholder="Enter a Password" />
            <p className="create-account-styling">Address:</p>
-           <FormInput name="username-input" placeholder="House/Flat Name or Number" />
+           <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
            <br></br>
-           <FormInput name="username-input" placeholder="Street Address" />
+           <FormInput handleChange={handleChange} name="street_address" placeholder="Street Address" />
            <br></br>
-           <FormInput name="username-input" placeholder="Town/City"/>
+           <FormInput handleChange={handleChange} name="town" placeholder="Town/City"/>
            <br></br>
-           <FormInput name="username-input" placeholder="Region" />
+           <FormInput handleChange={handleChange} name="region" placeholder="Region" />
            <br></br>
-           <FormInput name="username-input" placeholder="Postcode" />
+           <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
 
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
