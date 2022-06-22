@@ -6,6 +6,7 @@ import ProfilePage from '../ProfilePage';
 import ProfilePageLocked from '../ProfilePage/lockedprofileIndex';
 import MainPage from './Components/MainPage';
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -15,16 +16,19 @@ function App() {
     console.log(isLoggedIn)
   }
 //comment here
-  return (
-    <div className="App">
-   {/* <Login text=""/>  
-    <CreateUser text=""/> 
-    <CreateEvent text=""/> 
-    <ProfilePage text=""/> 
-    <ProfilePageLocked text=""/> */}
-    <MainPage text=""/>
-    </div>
-  );
+return (
+  <div className="app">
+  <BrowserRouter>
+  <Routes>
+  <Route index element={isLoggedIn ? <Login onClickLogin={toggleLogin} text=""/>: <MainPage></MainPage>}/>
+  <Route path="/newu" element={<CreateUser text=""/> }></Route>
+  <Route path="/newe" element={<CreateEvent text=""/> }></Route>
+  {/* <ProfilePage text=""/> 
+  <ProfilePageLocked text=""/> */}
+  </Routes>
+  </BrowserRouter>
+  </div>
+);
 }
 
 export default App;

@@ -3,9 +3,21 @@ import GreenButton from '../App/Components/Button/GreenButtonIndex'
 import OrangeButton from '../App/Components/Button/OrangeButtonIndex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 import LargeFormInput from '../App/Components/InputTypeText/LargeInput'
+import {useState} from "react";
 
 const CreateEvent = () => {
-    
+
+  const [inputValue, setInputValue] = useState([{}])
+
+  function handleChange(event){
+    setInputValue({
+      ...inputValue,
+      [event.target.name]: event.target.value
+  });
+    console.log(inputValue)
+
+  }
+  
 const submitEvent = async () => {
     (async () => {
     const rawResponse = await fetch('http://localhost:5000/events', {
@@ -48,29 +60,29 @@ const submitEvent = async () => {
       <div className='login-inputs'> 
            <h1 className="h1-styling">Create an Event</h1>
            <p className="create-account-styling">Event Name:</p>
-           <FormInput name="username-input" placeholder="Event Name Here" />
+           <FormInput handleChange={handleChange} name="name_of_event" placeholder="Event Name Here" />
            <p className="create-account-styling">Host:</p>
-           <FormInput name="username-input" placeholder="Individual or Company Name"/>
+           <FormInput handleChange={handleChange} name="event_host" placeholder="Individual or Company Name"/>
            
            <p className="create-account-styling">Event Address:</p>
-           <FormInput name="username-input" placeholder="Building Name or Number" />
+           <FormInput handleChange={handleChange} name="house_number" placeholder="Building Name or Number" />
            <br></br>
-           <FormInput name="username-input" placeholder="Street Address" />
+           <FormInput handleChange={handleChange} name="street_address" placeholder="Street Address" />
            <br></br>
-           <FormInput name="username-input" placeholder="Town/City"/>
+           <FormInput handleChange={handleChange} name="town" placeholder="Town/City"/>
            <br></br>
-           <FormInput name="username-input" placeholder="Region" />
+           <FormInput handleChange={handleChange} name="region" placeholder="Region" />
            <br></br>
-           <FormInput name="username-input" placeholder="Postcode" />
+           <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
 
            <p className="create-account-styling">Start Time:</p>
-           <FormInput name="username-input" />
+           <FormInput handleChange={handleChange} name="start_time" />
            <p className="create-account-styling">End Time:</p>
-           <FormInput name="username-input" />
+           <FormInput handleChange={handleChange} name="end_time" />
 
            <br></br>
            <p className="create-account-styling">Event Information:</p>
-           <LargeFormInput className="large-text-input" placeholder="Say a little about your Event. Is it just a social? Is it a Study Session? The more the merrier."/>
+           <LargeFormInput handleChange={handleChange} name="description" className="large-text-input" placeholder="Say a little about your Event. Is it just a social? Is it a Study Session? The more the merrier."/>
       
 
 
