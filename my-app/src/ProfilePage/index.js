@@ -1,8 +1,48 @@
 import React from 'react'
 import LittleRedButton from '../App/Components/Button/LittleRedButtonindex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
+import { useState } from 'react'
 
 const ProfilePage = () => {
+
+    const [inputValue, setInputValue] = useState([{}])
+
+    function handleChange(event){
+      setInputValue({
+        ...inputValue,
+        [event.target.name]: event.target.value
+    });
+      console.log(inputValue)
+  
+    }
+  
+    async function submitUser(){
+      // console.log("This works")
+      
+    
+    (async () => {
+      const response = await fetch('http://localhost:5000/users/2', {
+        method: 'PATCH',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        first_name: inputValue.first_name,
+        last_name: inputValue.last_name,
+        email: inputValue.email,
+        password: inputValue.password,
+        house_number: inputValue.house_number,
+        street_address: inputValue.street_address,
+        town: inputValue.town,
+        region: inputValue.region,
+        postcode: inputValue.postcode})
+      });
+      const content = await response.json();
+    
+      console.log(content);
+    })();
+  }
     return (
         <div>
 
@@ -15,29 +55,29 @@ const ProfilePage = () => {
         <div className='login-inputs'> 
 
            <h1 className="h1-styling">My Profile</h1>
-           <LittleRedButton className="little-red-button" buttonText={"Edit Profile"}/>
+           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Edit Profile"}/>
            <p className='profile-icon'>JK</p> 
 
            
         
            <p className="create-account-styling" >First Name:</p>
-           <FormInput name="username-input" placeholder='Enter your First Name' disabled={true}/>
+           <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name' disabled={true}/>
            <p className="create-account-styling" >Surname:</p>
-           <FormInput name="username-input" placeholder='Enter your Surname'/>
+           <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname'/>
            <p className="create-account-styling">Username:</p>
-           <FormInput name="username-input" placeholder="Enter your Username" />
+           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" />
            <p className="create-account-styling">Change Password:</p>
-           <FormInput name="username-input" placeholder="Enter a Password" />
+           <FormInput handleChange={handleChange} name="password" placeholder="Enter a Password" />
            <p className="create-account-styling">Address:</p>
-           <FormInput name="username-input" placeholder="House/Flat Name or Number" />
+           <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
            <br></br>
-           <FormInput name="username-input" placeholder="Street Address" />
+           <FormInput handleChange={handleChange} name="street_address" placeholder="Street Address" />
            <br></br>
-           <FormInput name="username-input" placeholder="Town/City"/>
+           <FormInput handleChange={handleChange} name="town" placeholder="Town/City"/>
            <br></br>
-           <FormInput name="username-input" placeholder="Region" />
+           <FormInput handleChange={handleChange} name="region" placeholder="Region" />
            <br></br>
-           <FormInput name="username-input" placeholder="Postcode" />
+           <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
 
 
          </div>
