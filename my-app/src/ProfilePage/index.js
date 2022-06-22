@@ -1,5 +1,6 @@
 import React from 'react'
 import LittleGreenButton from '../App/Components/Button/LittleGreenButtonIndex'
+import LittleRedButton from "../App/Components/Button/LittleRedButtonindex" 
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 import { useState } from 'react'
 
@@ -57,12 +58,9 @@ const ProfilePage = () => {
         <div className='login-inputs'> 
 
            <h1 className="h1-styling">My Profile</h1>
-<<<<<<< HEAD
            <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Edit Profile"}/>
-=======
            <div className='profile-page-button-and-icon-spacing'>
            <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
->>>>>>> 321a39096f28f6843a04c412d9d65b643fca087a
            <p className='profile-icon'>JK</p> 
             </div>
            
