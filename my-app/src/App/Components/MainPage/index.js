@@ -14,14 +14,13 @@ const MainPage = () => {
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
         <p className='profile-icon'>JK</p>
       </header> 
-
-      <p className="create-account-styling">Search By Event, Host or Region</p>
-
-
+        
+      <p className="search-bar-label">Search By Event, Host or Region</p>
       <FormInput name="username-input" placeholder="Search Here"/>
       <br></br>
+      <br></br>
       <div id="map"><Map/></div>
-
+        <br></br>
     <br></br>
       <GreenButton className="green-button" buttonText={"Create User"}/>
     <br></br>
@@ -37,13 +36,12 @@ const MainPage = () => {
 
 
 
-    <ul>
+    <ul className='event-list-main-page'>
         <ii><OrangeButton className="orange-button" buttonText={"Brum.JS"}/></ii>
         <ii><OrangeButton className="orange-button" buttonText={"Tech Rootz"}/></ii>
         <ii><OrangeButton className="orange-button" buttonText={"Sign & Digital 2023 UK"}/></ii>
         <ii><OrangeButton className="orange-button" buttonText={"WITB Social Network and Mingle"}/></ii>
-
-        <li><ExpandedEvent/></li>
+        <li className='expanded-event-container'><ExpandedEvent/></li>
     </ul>
         </div>
     )
