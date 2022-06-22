@@ -2,10 +2,9 @@ import './App.css';
 import Login from '../Login';
 import CreateUser from '../CreateUser';
 import CreateEvent from '../CreateEvent';
-import {BrowserRouter, Routes, Route,} from "react-router-dom";
-
-// import ProfilePage from '../ProfilePage';
-// import ProfilePageLocked from '../ProfilePage/lockedprofileIndex';
+import ProfilePage from '../ProfilePage';
+import ProfilePageLocked from '../ProfilePage/lockedprofileIndex';
+import MainPage from './Components/MainPage';
 import { useState } from 'react';
 
 function App() {
@@ -17,19 +16,18 @@ function App() {
   }
 //comment here
   return (
-    <div className="app">
-    <BrowserRouter>
-    <Routes>
-    <Route index element={isLoggedIn ? <Login onClickLogin={toggleLogin} text=""/>: <h1>mainpage logged in!</h1>}/>
-    <Route path="/newu" element={<CreateUser text=""/> }></Route>
-    <Route path="/newe" element={<CreateEvent text=""/> }></Route>
-    {/* <ProfilePage text=""/> 
+    <div className="App">
+   {/* <Login text=""/>  
+    <CreateUser text=""/> 
+    <CreateEvent text=""/> 
+    <ProfilePage text=""/> 
     <ProfilePageLocked text=""/> */}
-    </Routes>
-    </BrowserRouter>
+    <MainPage text=""/>
     </div>
   );
 }
 
 export default App;
+
+Pushing tEST cOMMENT anothe rcomment
 
