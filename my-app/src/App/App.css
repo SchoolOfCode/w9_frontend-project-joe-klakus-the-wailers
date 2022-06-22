@@ -23,7 +23,7 @@
 .app {
   text-align: center;
   font-family: var(--font);
-  max-width: 600px;
+  /* max-width: 700px; */
   margin: 0 auto; 
 }
 /* ------------------------------------------------------------- */
@@ -40,15 +40,103 @@
 }
 
 /* ------------------------------------------------------------- */
+/* MAP CONTAINER */
 .leaflet-container { 
-  height: 360px;
+  height: 80vmin;
   width: 80%;
   margin: 0 auto;
 }
+/* ------------------------------------------------------------- */
+/* MAIN PAGE STYLING */
+.search-bar-label{
+  font-weight: bold;
+  font-family: var(--font);
+  font-size: 4vmin;
+  text-align: center;
+  color: var(--primary-blue);
+ margin:0px;
+}
+
+.expanded-event-container{
+  background-color: var(--primary-orange);
+  color: var(--primary-blue);
+  border-radius: 10px;
+  width: 60vmin;
+  text-align: center;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  border: 2px solid var(--primary-blue);
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.event-list-main-page{
+  margin:0px;
+  list-style: none;
+  font-weight: bold;
+  font-family: var(--font);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  text-align: center;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 60vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+.attedning{
+
+}
+.attending-heading{
+  margin-bottom: 3px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+.description-box{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 0px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+.h2-expanding-event{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+.host-heading{
+  margin-top: 2px;
+  margin-bottom: 10px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+.event-image{
+  border-radius: 10px;
+  height: 15vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
 
 /* ------------------------------------------------------------- */
-
-
 /* ALL PRIMARY BUTTON STYLING */
 .green-button{
   font-weight: bold;
@@ -67,7 +155,8 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
   cursor: pointer;
-  margin: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .orange-button{
@@ -87,7 +176,8 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
   cursor: pointer;
-  margin: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .red-button{
@@ -107,7 +197,8 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
   cursor: pointer;
-  margin: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 
 
 
@@ -124,13 +215,77 @@
   font-size: 3vmin;
   padding: 2vmin;
   width: 30vmin;
+  height: 8vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  align-items: center;
+  
+}
+
+.little-green-button{
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-green);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--white);
+  text-align: center;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 30vmin;
+  height: 8vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  align-items: center;
+  
+}
+
+.tiny-green-button{
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-green);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--white);
+  text-align: center;
+  font-size: 3vmin;
+  width: 12vmin;
   height: 7vmin;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
   cursor: pointer;
-  margin: 15px;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tiny-red-button{
+  font-weight: bold;
+  font-family: var(--font);
+  background: var(--primary-red);
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--white);
+  text-align: center;
+  font-size: 3vmin;
+  width: 12vmin;
+  height: 7vmin;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  cursor: pointer;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 /* ------------------------------------------------------------- */
 
@@ -183,7 +338,7 @@
   border-radius: 10px;
   color: var(--primary-blue);
   border-color: var(--primary-blue);
-  border: 4px double var(--primary-blue);
+  border: 2px solid var(--primary-blue);
   font-size: 4vmin;
   padding: 2vmin;
   width: 75vmin;
@@ -202,9 +357,11 @@
   font-weight: bold;
   font-family: var(--font);
   font-size: 4vmin;
-  text-align: start;
+  text-align: left;
   padding: left 5vmin;
   color: var(--primary-blue);
+  padding-left: 25px;
+  
 }
 
 .large-text-input{
@@ -228,9 +385,12 @@
 
 
 /* ------------------------------------------------------------- */
-
+/* HEADER STYLING */
 .header{
   display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
   align-items: center;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
@@ -241,7 +401,8 @@
 /* ------------------------------------------------------------- */
 
 .our-logo {
-  height: 19vmin;
+  height: 15vmin;
+  
   pointer-events: none;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
@@ -261,10 +422,10 @@
   border-radius: 100px;
   color: var(--white);
   text-align: center;
-  font-size: 8vmin;
+  font-size: 4vmin;
   padding: 2vmin;
-  width: 10vmin;
-  height: 10vmin;
+  width: 5vmin;
+  height: 5vmin;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
   -o-transition: all var(--transition-time);
@@ -275,6 +436,21 @@
 
 
 /* ------------------------------------------------------------- */
+/* PROFILE PAGE STYLING */
+.profile-page-button-and-icon-spacing{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  align-items: center;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,5 +1,5 @@
 import React from 'react'
-import LittleRedButton from '../App/Components/Button/LittleRedButtonindex'
+import LittleGreenButton from '../App/Components/Button/LittleGreenButtonIndex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 import { useState } from 'react'
 
@@ -47,17 +47,24 @@ const ProfilePage = () => {
         <div>
 
         <header className='header'>
+        
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
         <p className='profile-icon'>JK</p> 
+        
         </header> 
         <br></br>
 
         <div className='login-inputs'> 
 
            <h1 className="h1-styling">My Profile</h1>
+<<<<<<< HEAD
            <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Edit Profile"}/>
+=======
+           <div className='profile-page-button-and-icon-spacing'>
+           <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
+>>>>>>> 321a39096f28f6843a04c412d9d65b643fca087a
            <p className='profile-icon'>JK</p> 
-
+            </div>
            
         
            <p className="create-account-styling" >First Name:</p>
