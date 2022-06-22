@@ -3,7 +3,9 @@ import FormInput from '../App/Components/InputTypeText/Input-Index'
 import GreenButton from '../App/Components/Button/GreenButtonIndex'
 import OrangeButton from '../App/Components/Button/OrangeButtonIndex'
 import '../App/App.css'
-const Login = () => {
+import { Link } from 'react-router-dom'
+
+const Login = ({onClickLogin}) => {
     return (
        
         <div>
@@ -22,12 +24,14 @@ const Login = () => {
            <a className='forgotten-password-link' href="url">Forgotten Username or Password?</a>
            <br></br>
            </div>
-           <GreenButton className="green-button" buttonText={"Login"}/>
+           <GreenButton handleClick={onClickLogin} className="green-button" buttonText={"Login"}/>
            <br></br>
+           <Link to="/newu">
            <OrangeButton className="orange-button" buttonText={"Create User"}/>
+           </Link>
            <br></br>
            <p id="guest-login-prompt">Dont want an Account? <br></br>Click Below.</p>
-           <GreenButton className="green-button" buttonText={"Guest Login"}/>
+           <GreenButton handleClick={onClickLogin} className="green-button" buttonText={"Guest Login"}/>
 
 
         </div>
