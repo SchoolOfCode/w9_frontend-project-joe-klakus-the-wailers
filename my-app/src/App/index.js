@@ -8,8 +8,13 @@ import MainPage from './Components/MainPage';
 import { useState } from 'react';
 
 function App() {
-  const [text, setText] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
+  const toggleLogin = () => {
+    setIsLoggedIn(false)
+    console.log(isLoggedIn)
+  }
+//comment here
   return (
     <div className="App">
    {/* <Login text=""/>  
