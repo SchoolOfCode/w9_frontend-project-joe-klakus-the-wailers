@@ -24,7 +24,7 @@ const MainPage = () => {
       <div id="map"><Map/></div>
         <br></br>
     <br></br>
-      <GreenButton className="green-button" buttonText={"Create User"}/>
+      <GreenButton className="green-button" buttonText={"Add an Event"}/>
     <br></br>
 
     <DropDown className="drop-down-styling"/>
