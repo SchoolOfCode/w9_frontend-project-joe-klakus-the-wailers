@@ -479,8 +479,7 @@ padding-right: 3vmin;
 /* ------------------------------------------------------------- */
 /* LOGO STYLING */
 .our-logo {
-  height: 20vmin;
-  
+  height: 15vmin;
   pointer-events: none;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
