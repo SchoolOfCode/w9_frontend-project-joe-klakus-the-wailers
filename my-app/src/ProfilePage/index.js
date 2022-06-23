@@ -83,6 +83,14 @@ const ProfilePage = ({id}) => {
            <br></br>
            <br></br>
            <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
+           <br></br>
+           <br></br>
+           <br></br>
+           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Log Out"}/>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
 
 
          </div>
