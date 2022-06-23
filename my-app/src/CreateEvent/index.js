@@ -6,7 +6,7 @@ import LargeFormInput from "../App/Components/InputTypeText/LargeInput";
 import { useState } from "react";
 import Map2 from "../App/Components/map/map2";
 
-const CreateEvent = () => {
+const CreateEvent = ({id}) => {
   const [inputValue, setInputValue] = useState([{}]);
 
   function handleChange(event) {
@@ -26,7 +26,7 @@ const CreateEvent = () => {
         },
         body: JSON.stringify({
           name_of_event: inputValue.name_of_event, /// Some values are hardcoded need to fix later
-          event_host: 1,
+          event_host: {id},
           start_time: "2004-10-19T09:23:54.000Z",
           end_time: "2004-10-19T12:23:54.000Z",
           description: inputValue.description,
@@ -53,7 +53,7 @@ const CreateEvent = () => {
           src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
           alt="Bootcamper Social Logo"
         />
-        <p className="profile-icon">JK</p>
+        <p className="profile-icon">{id}</p>
       </header>
 
       <br></br>
@@ -66,12 +66,12 @@ const CreateEvent = () => {
           name="name_of_event"
           placeholder="Event Name Here"
         />
-        <p className="create-account-styling">Host:</p>
-        <FormInput
+         <p className="create-account-styling">Host:</p>
+         <FormInput
           handleChange={handleChange}
           name="event_host"
           placeholder="Individual or Company Name"
-        />
+        />  
 
         <p className="create-account-styling">
           Use the map to pin the Location of your event:

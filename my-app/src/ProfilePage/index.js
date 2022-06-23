@@ -4,7 +4,7 @@ import LittleRedButton from "../App/Components/Button/LittleRedButtonindex"
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 import { useState } from 'react'
 
-const ProfilePage = () => {
+const ProfilePage = ({id}) => {
 
     const [inputValue, setInputValue] = useState([{}])
 
@@ -20,7 +20,7 @@ const ProfilePage = () => {
       
     
     (async () => {
-      const response = await fetch('http://localhost:5000/users/2', {
+      const response = await fetch(`http://localhost:5000/users/${id}`, {
         method: 'PATCH',
         headers: {
           'Accept': 'application/json',
@@ -47,7 +47,7 @@ const ProfilePage = () => {
         <header className='header'>
         
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
-        <p className='profile-icon'>JK</p> 
+        <p className='profile-icon'>{id}</p> 
         
         </header> 
         <br></br>
