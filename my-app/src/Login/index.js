@@ -9,6 +9,7 @@ import { jwtDecode } from "../App/jwt-decode.js";
 
 const Login = () => {
     const [inputValue, setInputValue] = useState([{}])
+    const [loginError, setLoginError] = useState()
 
     function handleChange(event){
       setInputValue({
@@ -33,14 +34,14 @@ const Login = () => {
       });
       const data = await response.json();
       if (data.error) {
-        alert(data.error)
+        setLoginError(data.error)
         return;
       }
       let accessToken = data.accessToken;
       const jwtDecoded = jwtDecode(accessToken);
-      alert(
-        `Login Successful! Your id is ${jwtDecoded.user_id} & Your email is ${jwtDecoded.email}`
-      );
+      // alert(
+      //   `Login Successful! Your id is ${jwtDecoded.user_id} & Your email is ${jwtDecoded.email}`
+      // );
       window.location.reload(false);
     })();
   }
@@ -56,7 +57,8 @@ const Login = () => {
            <h1 className="h1-styling">Email Address:</h1>
            <FormInput handleChange={handleChange} name="username" />
            <h1 className="h1-styling">Password:</h1>
-           <FormInput inputType='password' handleChange={handleChange} name="password" />
+           <FormInput inputType='password' handleChange={handleChange} name="password" required='true'/>
+           <h1 className='login-error-message'>{loginError}</h1>
            <br></br>
            <a className='forgotten-password-link' href="url">Forgotten Username or Password?</a>
            <br></br>

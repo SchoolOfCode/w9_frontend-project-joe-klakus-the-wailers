@@ -7,6 +7,7 @@ import ExpandedEvent from '../ExpandedEvent/ExpandedEventIndex'
 import Map from '../map/map2.js'
 import LittleGreenButton from '../Button/LittleGreenButtonIndex'
 import DropDown from '../DropDown/DropDownIndex'
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 const MainPage = () => {
@@ -32,11 +33,12 @@ const MainPage = () => {
       fetchData()
     },[]);
 
+const MainPage = ({id}) => {
     return (
         <div>
         <header className='header'>
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
-        <p className='profile-icon'>JK</p>
+        <p className='profile-icon'>{id}</p>
       </header> 
         
       <p className="search-bar-label">Search By Event, Host or Region</p>
@@ -46,7 +48,9 @@ const MainPage = () => {
       <div id="map"><Map/></div>
         <br></br>
     <br></br>
+    <Link to="/newe">
       <GreenButton className="green-button" buttonText={"Add an Event"}/>
+      </Link>
     <br></br>
 
     <DropDown className="drop-down-styling"/>
