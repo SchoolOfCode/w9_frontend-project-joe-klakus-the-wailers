@@ -6,6 +6,8 @@ import LittleRedButton from '../Button/LittleRedButtonindex.js'
 import ExpandedEvent from '../ExpandedEvent/ExpandedEventIndex'
 import Map from '../map/map2.js'
 import LittleGreenButton from '../Button/LittleGreenButtonIndex'
+import DropDown from '../DropDown/DropDownIndex'
+
 
 const MainPage = () => {
     return (
@@ -25,6 +27,18 @@ const MainPage = () => {
       <GreenButton className="green-button" buttonText={"Create User"}/>
     <br></br>
 
+    
+    <DropDown/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+
+    
+
+{/*
     <p>Filter</p>
     <ul>
         <li>Date (Start Time)</li>
@@ -33,7 +47,7 @@ const MainPage = () => {
         <li>Distance</li>
         <li>Type of Event</li>
     </ul>
-
+*/}
 
 
     <ul className='event-list-main-page'>
