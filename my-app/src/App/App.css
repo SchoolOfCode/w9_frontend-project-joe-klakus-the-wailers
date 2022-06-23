@@ -31,12 +31,14 @@
 /* ALL HEADING STYLING */
 
 .h1-styling{
-  font-size: 7vmin;
+  font-size: 6vmin;
   color: var(--primary-blue);
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* ------------------------------------------------------------- */
@@ -103,8 +105,8 @@
 }
 
 .description-box{
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 0px;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
@@ -137,7 +139,7 @@
 }
 
 /* ------------------------------------------------------------- */
-/* ALL PRIMARY BUTTON STYLING */
+/* ALL  BUTTON STYLING */
 .green-button{
   font-weight: bold;
   font-family: var(--font);
@@ -447,6 +449,7 @@
   -moz-transition: all var(--transition-time);
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
+  max-width: 60vmin;
 }
 
 

@@ -52,24 +52,30 @@ const Login = () => {
         {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
         </header>
         <br></br>
-           <div className='login-inputs'> 
-           <h1 className="h1-styling">Username</h1>
+           {/* <div className='login-inputs'>  */}
+           <h1 className="h1-styling">Email Address:</h1>
            <FormInput handleChange={handleChange} name="username" />
-           <h1 className="h1-styling">Password</h1>
-           <FormInput handleChange={handleChange} name="password" />
+           <h1 className="h1-styling">Password:</h1>
+           <FormInput inputType='password' handleChange={handleChange} name="password" />
            <br></br>
            <a className='forgotten-password-link' href="url">Forgotten Username or Password?</a>
            <br></br>
-           </div>
+           <br></br>
+           <br></br>
+           {/* </div> */}
            <GreenButton handleClick={submitUser} className="green-button" buttonText={"Login"}/>
            <br></br>
+           <br></br>
            <Link to="/newu">
-           <OrangeButton className="orange-button" buttonText={"Create User"}/>
+           <OrangeButton className="orange-button" buttonText={"Create Account"}/>
            </Link>
            <br></br>
            <p id="guest-login-prompt">Dont want an Account? <br></br>Click Below.</p>
            <GreenButton handleClick={submitUser} className="green-button" buttonText={"Guest Login"}/>
-
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
 
         </div>
     )
