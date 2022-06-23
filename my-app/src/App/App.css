@@ -168,6 +168,15 @@
 /* ------------------------------------------------------------- */
 
 /* ALL  BUTTON STYLING */
+.green-button:hover {opacity: 0.8}
+.orange-button:hover {opacity: 0.8}
+.red-button:hover {opacity: 0.8}
+.little-green-button:hover {opacity: 0.8}
+.little-red-button:hover {opacity: 0.8}
+.tiny-green-button:hover {opacity: 0.8}
+.tiny-red-button:hover {opacity: 0.8}
+
+
 .green-button{
   font-weight: bold;
   font-family: var(--font);
@@ -177,7 +186,6 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  padding: 2vmin;
   width: 60vmin;
   height: 7vmin;
   -webkit-transition: all var(--transition-time);
@@ -187,7 +195,10 @@
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 5px;
+  opacity: 1;
+  transition: 0.3s;
 }
+
 
 .orange-button{
   font-weight: bold;
@@ -198,7 +209,7 @@
   color: var(--primary-blue);
   text-align: center;
   font-size: 3vmin;
-  padding: 2vmin;
+  
   width: 60vmin;
   height: 7vmin;
   -webkit-transition: all var(--transition-time);
@@ -208,7 +219,11 @@
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 5px;
+  opacity: 1;
+  transition: 0.3s;
 }
+
+
 
 .red-button{
   font-weight: bold;
@@ -219,7 +234,7 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  padding: 2vmin;
+  
   width: 60vmin;
   height: 7vmin;
   -webkit-transition: all var(--transition-time);
@@ -229,7 +244,8 @@
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 5px;
-
+  opacity: 1;
+  transition: 0.3s;
 
 
 }
@@ -243,7 +259,7 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  padding: 2vmin;
+  
   width: 30vmin;
   height: 8vmin;
   -webkit-transition: all var(--transition-time);
@@ -252,7 +268,8 @@
   transition: all var(--transition-time);
   cursor: pointer;
   align-items: center;
-  
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .little-green-button{
@@ -264,7 +281,7 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  padding: 2vmin;
+  
   width: 30vmin;
   height: 8vmin;
   -webkit-transition: all var(--transition-time);
@@ -273,7 +290,8 @@
   transition: all var(--transition-time);
   cursor: pointer;
   align-items: center;
-  
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .tiny-green-button{
@@ -295,6 +313,8 @@
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .tiny-red-button{
@@ -316,6 +336,8 @@
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
+  opacity: 1;
+  transition: 0.3s;
 }
 /* ------------------------------------------------------------- */
 
