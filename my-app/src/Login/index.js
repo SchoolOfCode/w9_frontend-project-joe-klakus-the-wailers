@@ -4,12 +4,49 @@ import GreenButton from '../App/Components/Button/GreenButtonIndex'
 import OrangeButton from '../App/Components/Button/OrangeButtonIndex'
 import '../App/App.css'
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import { jwtDecode } from "../App/jwt-decode.js";
 
-const Login = ({onClickLogin}) => {
+const Login = () => {
+    const [inputValue, setInputValue] = useState([{}])
+
+    function handleChange(event){
+      setInputValue({
+        ...inputValue,
+        [event.target.name]: event.target.value
+    }); 
+    }
+  
+    async function submitUser(){ 
+    (async () => {
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        credentials: "include",
+        cache: "no-cache",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        username: inputValue.username,
+        password: inputValue.password,})
+      });
+      const data = await response.json();
+      if (data.error) {
+        alert(data.error)
+        return;
+      }
+      let accessToken = data.accessToken;
+      const jwtDecoded = jwtDecode(accessToken);
+      alert(
+        `Login Successful! Your id is ${jwtDecoded.user_id} & Your email is ${jwtDecoded.email}`
+      );
+      window.location.reload(false);
+    })();
+  }
     return (
-       
-        <div>
         
+        <div>
         <header className='header'>
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
         {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
@@ -17,21 +54,21 @@ const Login = ({onClickLogin}) => {
         <br></br>
            <div className='login-inputs'> 
            <h1 className="h1-styling">Username</h1>
-           <FormInput name="username-input" />
+           <FormInput handleChange={handleChange} name="username" />
            <h1 className="h1-styling">Password</h1>
-           <FormInput name="password-input" />
+           <FormInput handleChange={handleChange} name="password" />
            <br></br>
            <a className='forgotten-password-link' href="url">Forgotten Username or Password?</a>
            <br></br>
            </div>
-           <GreenButton handleClick={onClickLogin} className="green-button" buttonText={"Login"}/>
+           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Login"}/>
            <br></br>
            <Link to="/newu">
            <OrangeButton className="orange-button" buttonText={"Create User"}/>
            </Link>
            <br></br>
            <p id="guest-login-prompt">Dont want an Account? <br></br>Click Below.</p>
-           <GreenButton handleClick={onClickLogin} className="green-button" buttonText={"Guest Login"}/>
+           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Guest Login"}/>
 
 
         </div>
