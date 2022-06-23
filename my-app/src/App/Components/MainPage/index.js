@@ -51,7 +51,7 @@ const MainPage = ({id, token }) => {
 				<br></br>
 				<br></br>
 				<div id="map">
-					<Map />
+				{events && <Map events={events}/>}
 				</div>
 				<br></br>
 				<br></br>

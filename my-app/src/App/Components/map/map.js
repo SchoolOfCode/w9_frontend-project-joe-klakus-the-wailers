@@ -13,7 +13,6 @@ export default function Map() {
         location.coords.longitude
       ])
     )},[])
-  console.log(posi)
 
 
   return (

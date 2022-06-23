@@ -3,26 +3,28 @@ import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBDr
 
 function DropDown() {
   return (
+    <div class="dropdown" mdbDropdown>
     <MDBDropdown>
       <MDBDropdownToggle className="drop-down-styling">Filter</MDBDropdownToggle>
       <MDBDropdownMenu>
         <MDBDropdownItem>
-          <MDBDropdownLink href="#">Date (Start Time)</MDBDropdownLink>
+          <MDBDropdownLink  className="drop-down-styling" href="#">Date (Start Time)</MDBDropdownLink>
         </MDBDropdownItem>
         <MDBDropdownItem>
-          <MDBDropdownLink href="#">Date (End Time)</MDBDropdownLink>
+          <MDBDropdownLink className="drop-down-styling" href="#">Date (End Time)</MDBDropdownLink>
         </MDBDropdownItem>
         <MDBDropdownItem>
-          <MDBDropdownLink href="#">Organizer / Host</MDBDropdownLink>
+          <MDBDropdownLink className="drop-down-styling" href="#">Organizer / Host</MDBDropdownLink>
         </MDBDropdownItem>
         <MDBDropdownItem>
-          <MDBDropdownLink href="#">Distance</MDBDropdownLink>
+          <MDBDropdownLink className="drop-down-styling" href="#">Distance</MDBDropdownLink>
         </MDBDropdownItem>
         <MDBDropdownItem>
-          <MDBDropdownLink href="#">Type of Event</MDBDropdownLink>
+          <MDBDropdownLink className="drop-down-styling" href="#">Type of Event</MDBDropdownLink>
         </MDBDropdownItem>
       </MDBDropdownMenu>
     </MDBDropdown>
+    </div>
   );
 }
 export default DropDown;
