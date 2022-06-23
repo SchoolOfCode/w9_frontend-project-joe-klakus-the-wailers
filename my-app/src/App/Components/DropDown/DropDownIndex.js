@@ -4,7 +4,7 @@ import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem, MDBDr
 function DropDown() {
   return (
     <MDBDropdown>
-      <MDBDropdownToggle>Filter</MDBDropdownToggle>
+      <MDBDropdownToggle className="drop-down-styling">Filter</MDBDropdownToggle>
       <MDBDropdownMenu>
         <MDBDropdownItem>
           <MDBDropdownLink href="#">Date (Start Time)</MDBDropdownLink>

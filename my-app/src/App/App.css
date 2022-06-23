@@ -137,8 +137,29 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
 }
+/* ------------------------------------------------------------- */
+.drop-down-styling{
+  font-weight: bold;
+  font-family: var(--font);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  text-align: left;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 60vmin;
+  height: 7vmin;
+ 
+}
 
 /* ------------------------------------------------------------- */
+
 /* ALL  BUTTON STYLING */
 .green-button{
   font-weight: bold;
