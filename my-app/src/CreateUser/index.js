@@ -3,10 +3,13 @@ import OrangeButton from '../App/Components/Button/OrangeButtonIndex'
 import GreenButton from '../App/Components/Button/GreenButtonIndex'
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 import { useState } from 'react';
+import {useNavigate} from "react-router"
 
 const CreateUser = () => {
 
   const [inputValue, setInputValue] = useState([{}])
+
+  const navigate = useNavigate();
 
   function handleChange(event){
     setInputValue({
@@ -38,7 +41,8 @@ const CreateUser = () => {
       postcode: inputValue.postcode})
     });
     const content = await response.json();
-  
+  //Navigates to the login page 
+    navigate("/");
   })();
 }
     return (

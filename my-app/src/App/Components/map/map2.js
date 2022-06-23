@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useState, useEffect } from 'react';
 
 export default function Map() {
-    let locations = [{lat:51.521, long:-3.2037},{lat:51.520, long:-3.2035},{lat:51.53, long:-3.21},{lat:51.524, long:-3.2045}]
+    let locations = [{lat:52.479780, long:-1.897950},{lat:52.471780, long:-1.896950},{lat:52.474780, long:-1.897850},{lat:52.477780, long:-1.894950}]
 
     const [posi, setPosi] = useState()
 
@@ -28,7 +28,7 @@ export default function Map() {
     {locations.map((location) =>
     <Marker position={[location.lat, location.long]}>
       <Popup>
-        You Are Here <br /> Easily customizable. {location.title}
+        You Are Here <br /> BRUM JS {location.title}
       </Popup>
     </Marker>)}
   </MapContainer>

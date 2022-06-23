@@ -6,10 +6,12 @@ import '../App/App.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { jwtDecode } from "../App/jwt-decode.js";
+import {useNavigate} from "react-router"
 
 const Login = () => {
     const [inputValue, setInputValue] = useState([{}])
     const [loginError, setLoginError] = useState()
+    const navigate = useNavigate();
 
     function handleChange(event){
       setInputValue({
@@ -43,7 +45,9 @@ const Login = () => {
       //   `Login Successful! Your id is ${jwtDecoded.user_id} & Your email is ${jwtDecoded.email}`
       // );
       window.location.reload(false);
+      
     })();
+
   }
     return (
         
@@ -73,7 +77,7 @@ const Login = () => {
            </Link>
            <br></br>
            <p id="guest-login-prompt">Dont want an Account? <br></br>Click Below.</p>
-           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Guest Login"}/>
+           <GreenButton handleClick={()=>{navigate("/main")}} className="green-button" buttonText={"Guest Login"}/>
            <br></br>
            <br></br>
            <br></br>

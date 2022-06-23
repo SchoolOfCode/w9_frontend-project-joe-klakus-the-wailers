@@ -10,7 +10,7 @@ import DropDown from "../DropDown/DropDownIndex";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const MainPage = ({id}) => {
+const MainPage = ({id, token }) => {
 	const [events, setEvents] = useState("");
 	const [visible, setVisible] = useState("none");
 
@@ -53,9 +53,11 @@ const MainPage = ({id}) => {
 				</div>
 				<br></br>
 				<br></br>
+				{(token) ?
 				<Link to="/newe">
 					<GreenButton className="green-button" buttonText={"Add an Event"} />
 				</Link>
+				:""}
 				<br></br>
 
 				<DropDown className="drop-down-styling" />

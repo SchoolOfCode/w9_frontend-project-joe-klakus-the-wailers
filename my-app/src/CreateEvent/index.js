@@ -4,7 +4,7 @@ import OrangeButton from "../App/Components/Button/OrangeButtonIndex";
 import FormInput from "../App/Components/InputTypeText/Input-Index";
 import LargeFormInput from "../App/Components/InputTypeText/LargeInput";
 import { useState } from "react";
-import Map2 from "../App/Components/map/map2";
+import Map from "../App/Components/map/map.js";
 
 const CreateEvent = ({id}) => {
   const [inputValue, setInputValue] = useState([{}]);
@@ -79,7 +79,7 @@ const CreateEvent = ({id}) => {
         <br></br>
         <br></br>
         <div id="map">
-          <Map2 />
+          <Map />
         </div>
         <br></br>
         <br></br>
