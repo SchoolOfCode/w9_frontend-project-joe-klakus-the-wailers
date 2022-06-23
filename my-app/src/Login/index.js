@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom'
 
 const Login = ({onClickLogin}) => {
     return (
-       
-        <div>
         
+
+
+        <div>
         <header className='header'>
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
         {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
@@ -31,7 +32,7 @@ const Login = ({onClickLogin}) => {
            </Link>
            <br></br>
            <p id="guest-login-prompt">Dont want an Account? <br></br>Click Below.</p>
-           <GreenButton handleClick={onClickLogin} className="green-button" buttonText={"Guest Login"}/>
+           <GreenButton handleClick={submitForm} className="green-button" buttonText={"Guest Login"}/>
 
 
         </div>
