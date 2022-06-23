@@ -13,14 +13,10 @@ const CreateUser = () => {
       ...inputValue,
       [event.target.name]: event.target.value
   });
-    console.log(inputValue)
 
   }
 
-  async function submitUser(){
-    // console.log("This works")
-    
-  
+  async function submitUser(){ 
   (async () => {
     const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
