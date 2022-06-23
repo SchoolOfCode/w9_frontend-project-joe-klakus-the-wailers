@@ -42,6 +42,15 @@
 }
 
 /* ------------------------------------------------------------- */
+/* LOGIN ERROR STYLING */
+.login-error-message{
+  font-size: 3vmin;
+  color: var(--primary-red);
+}
+
+
+
+/* ------------------------------------------------------------- */
 /* MAP CONTAINER */
 .leaflet-container { 
   height: 80vmin;
@@ -422,9 +431,9 @@
 }
 
 /* ------------------------------------------------------------- */
-
+/* LOGO STYLING */
 .our-logo {
-  height: 15vmin;
+  height: 20vmin;
   
   pointer-events: none;
   -webkit-transition: all var(--transition-time);
