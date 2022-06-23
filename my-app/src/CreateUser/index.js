@@ -8,7 +8,7 @@ import {useNavigate} from "react-router"
 const CreateUser = () => {
 
   const [inputValue, setInputValue] = useState([{}])
-
+  //navigate function
   const navigate = useNavigate();
 
   function handleChange(event){
