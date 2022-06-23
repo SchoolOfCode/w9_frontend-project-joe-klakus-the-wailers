@@ -58,10 +58,8 @@ const ProfilePage = () => {
         <div className='login-inputs'> 
 
            <h1 className="h1-styling">My Profile</h1>
-           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Edit Profile"}/>
            <div className='profile-page-button-and-icon-spacing'>
-           <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
-           <p className='profile-icon'>JK</p> 
+           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Edit Profile"}/>
             </div>
            
         
@@ -70,9 +68,9 @@ const ProfilePage = () => {
            <p className="create-account-styling" >Surname:</p>
            <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname'/>
            <p className="create-account-styling">Username:</p>
-           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" />
+           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" required='required'/>
            <p className="create-account-styling">Change Password:</p>
-           <FormInput handleChange={handleChange} name="password" placeholder="Enter a Password" />
+           <FormInput inputType='password' handleChange={handleChange} name="password" placeholder="Enter a Password" />
            <p className="create-account-styling">Address:</p>
            <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
            <br></br>
@@ -83,6 +81,11 @@ const ProfilePage = () => {
            <FormInput handleChange={handleChange} name="region" placeholder="Region" />
            <br></br>
            <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+           <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
 
 
          </div>
