@@ -56,6 +56,7 @@
   height: 80vmin;
   width: 80%;
   margin: 0 auto;
+  border-radius: 10px;
 }
 /* ------------------------------------------------------------- */
 /* MAIN PAGE STYLING */
@@ -102,9 +103,7 @@
   transition: all var(--transition-time);
 }
 
-.attedning{
 
-}
 .attending-heading{
   margin-bottom: 3px;
   -webkit-transition: all var(--transition-time);
@@ -153,7 +152,6 @@
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
-  cursor: pointer;
   overflow: hidden;
   outline: none;
   display: inline-block;
@@ -396,6 +394,9 @@
   
 }
 
+/* ------------------------------------------------------------- */
+
+/* CREATE EVENT STYLING */
 .large-text-input{
   font-family: var(--font);
   display: inline-block;
@@ -414,6 +415,29 @@
   transition: all var(--transition-time);
 }
 
+.date-time-select{
+  
+  font-family: var(--font);
+  background: white;
+  display: inline-block;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  text-align: center;
+  font-size: 4vmin;
+  width: 45vmin;
+  height: 10vmin;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+padding-left: 1vmin;
+padding-right: 3vmin;
+  
+
+}
 
 
 /* ------------------------------------------------------------- */
