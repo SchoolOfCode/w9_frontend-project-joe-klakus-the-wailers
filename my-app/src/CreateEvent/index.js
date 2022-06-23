@@ -14,7 +14,6 @@ const CreateEvent = ({id}) => {
       ...inputValue,
       [event.target.name]: event.target.value,
     });
-    console.log(inputValue);
   }
 
   const submitEvent = async () => {
@@ -44,7 +43,6 @@ const CreateEvent = ({id}) => {
       });
       const content = await rawResponse.json();
 
-      console.log(content);
     })();
   };
   return (

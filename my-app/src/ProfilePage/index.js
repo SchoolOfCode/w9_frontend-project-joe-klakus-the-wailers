@@ -13,12 +13,10 @@ const ProfilePage = ({id}) => {
         ...inputValue,
         [event.target.name]: event.target.value
     });
-      console.log(inputValue)
   
     }
   
     async function submitUser(){
-      // console.log("This works")
       
     
     (async () => {
@@ -41,7 +39,6 @@ const ProfilePage = ({id}) => {
       });
       const content = await response.json();
     
-      console.log(content);
     })();
   }
     return (

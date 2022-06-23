@@ -8,7 +8,30 @@ import Map from '../map/map2.js'
 import LittleGreenButton from '../Button/LittleGreenButtonIndex'
 import DropDown from '../DropDown/DropDownIndex'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
+const MainPage = () => {
+    const [events, setEvents] = useState('');
+    const [visible, setVisible] = useState('none')
+
+    useEffect(() => {
+        //get the events
+      async function fetchData() {
+        const res = await fetch('http://localhost:5000/events', {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "cors",
+          credentials: "include",
+        });
+        const data = await res.json();
+        setEvents(data.Payload)
+        return data
+      
+      }
+      //runs the function
+      fetchData()
+    },[]);
 
 const MainPage = ({id}) => {
     return (
@@ -45,11 +68,29 @@ const MainPage = ({id}) => {
 
 
     <ul className='event-list-main-page'>
-        <ii><OrangeButton className="orange-button" buttonText={"Brum.JS"}/></ii>
-        <ii><OrangeButton className="orange-button" buttonText={"Tech Rootz"}/></ii>
-        <ii><OrangeButton className="orange-button" buttonText={"Sign & Digital 2023 UK"}/></ii>
-        <ii><OrangeButton className="orange-button" buttonText={"WITB Social Network and Mingle"}/></ii>
-        <li className='expanded-event-container'><ExpandedEvent/></li>
+        {events &&
+        events.map((event) => (
+            <li className='expanded-event-container'>
+            <ExpandedEvent 
+                name_of_event={event.name_of_event}
+                cost={event.cost}
+                description={event.description}
+                end_time= {event.end_time}
+                event_host= {event.event_host}
+                events_id= {event.events_id}
+                house_number= {event.house_number}
+                lat= {event.lat}
+                long= {event.lat}
+                postcode= {event.postcode}
+                region= {event.region}
+                start_time= {event.start_time}
+                street_address= {event.street_address}
+                town= {event.town}
+
+                visible={visible}
+                onClick={()=>{visible === 'none' ? setVisible('') : setVisible('none')}}
+            /></li>
+        ))}
     </ul>
         </div>
     )
