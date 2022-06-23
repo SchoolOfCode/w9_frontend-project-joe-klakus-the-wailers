@@ -27,17 +27,8 @@ const MainPage = () => {
       <GreenButton className="green-button" buttonText={"Create User"}/>
     <br></br>
 
+    <DropDown className="drop-down-styling"/>
     
-    <DropDown/>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-
-    
-
 {/*
     <p>Filter</p>
     <ul>
