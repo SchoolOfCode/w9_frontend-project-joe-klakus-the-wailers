@@ -18,7 +18,7 @@ export default function Map() {
 
   return (
     <div>
-    <h1>Map</h1>
+    
     {posi && 
     <MapContainer center={posi} zoom={13} scrollWheelZoom={false}>
     <TileLayer
