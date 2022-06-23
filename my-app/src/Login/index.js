@@ -57,7 +57,7 @@ const Login = () => {
            <h1 className="h1-styling">Email Address:</h1>
            <FormInput handleChange={handleChange} name="username" />
            <h1 className="h1-styling">Password:</h1>
-           <FormInput inputType='password' handleChange={handleChange} name="password" required='true'/>
+           <FormInput inputType='password' handleChange={handleChange} name="password"/>
            <h1 className='login-error-message'>{loginError}</h1>
            <br></br>
            <a className='forgotten-password-link' href="url">Forgotten Username or Password?</a>

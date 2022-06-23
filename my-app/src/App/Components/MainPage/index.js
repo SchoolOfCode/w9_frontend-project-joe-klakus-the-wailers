@@ -10,7 +10,7 @@ import DropDown from "../DropDown/DropDownIndex";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const MainPage = () => {
+const MainPage = ({id}) => {
 	const [events, setEvents] = useState("");
 	const [visible, setVisible] = useState("none");
 
@@ -32,7 +32,7 @@ const MainPage = () => {
 		fetchData();
 	}, []);
 
-	const MainPage = ({ id }) => {
+	
 		return (
 			<div>
 				<header className="header">
@@ -101,5 +101,5 @@ const MainPage = () => {
 			</div>
 		);
 	};
-};
+
 export default MainPage;
