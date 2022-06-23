@@ -5,9 +5,12 @@ import FormInput from "../App/Components/InputTypeText/Input-Index";
 import LargeFormInput from "../App/Components/InputTypeText/LargeInput";
 import { useState } from "react";
 import Map from "../App/Components/map/map.js";
+import { useNavigate } from "react-router";
 
 const CreateEvent = ({id}) => {
   const [inputValue, setInputValue] = useState([{}]);
+
+  const navigate = useNavigate();
 
   function handleChange(event) {
     setInputValue({
@@ -53,7 +56,7 @@ const CreateEvent = ({id}) => {
           src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
           alt="Bootcamper Social Logo"
         />
-        <p className="profile-icon">{id}</p>
+        <p className="profile-icon" onClick={()=>{navigate("/main")}}>{id}</p>
       </header>
 
       <br></br>

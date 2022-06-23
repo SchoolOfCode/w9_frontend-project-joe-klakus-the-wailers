@@ -3,10 +3,16 @@ import LittleGreenButton from '../App/Components/Button/LittleGreenButtonIndex'
 import LittleRedButton from "../App/Components/Button/LittleRedButtonindex" 
 import FormInput from '../App/Components/InputTypeText/Input-Index'
 import { useState } from 'react'
+import { useNavigate } from 'react-router'
+
 
 const ProfilePage = ({id}) => {
 
     const [inputValue, setInputValue] = useState([{}])
+    const [isDisabled, setIsDisabled] = useState("none")
+    const [isDisabledText, setIsDisabledText] = useState("#e0e0e2")
+
+    const navigate = useNavigate();
 
     function handleChange(event){
       setInputValue({
@@ -15,10 +21,14 @@ const ProfilePage = ({id}) => {
     });
   
     }
+
+    function toggleDisable(){
+      isDisabled === "none" ? setIsDisabled(true) : setIsDisabled("none");
+      isDisabledText === "#e0e0e2" ? setIsDisabledText("var(--primary-blue)") : setIsDisabledText("#e0e0e2");
+      console.log(isDisabled);
+    }
   
     async function submitUser(){
-      
-    
     (async () => {
       const response = await fetch(`http://localhost:5000/users/${id}`, {
         method: 'PATCH',
@@ -47,7 +57,9 @@ const ProfilePage = ({id}) => {
         <header className='header'>
         
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
-        <p className='profile-icon'>{id}</p> 
+        <p className='profile-icon' onClick={()=>{navigate("/main")}}>{id}</p> 
+
+        {/* {id > 0 ? {id} : "G"} */}
         
         </header> 
         <br></br>
@@ -56,33 +68,33 @@ const ProfilePage = ({id}) => {
 
            <h1 className="h1-styling">My Profile</h1>
            <div className='profile-page-button-and-icon-spacing'>
-           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Edit Profile"}/>
+           <LittleRedButton handleClick={toggleDisable} className="little-red-button" buttonText={"Edit Profile"}/>
             </div>
            
         
            <p className="create-account-styling" >First Name:</p>
-           <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name' disabled={true}/>
+           <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name' default= "Mustafa" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling" >Surname:</p>
-           <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname'/>
+           <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname' default= "Mohamad" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling">Username:</p>
-           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" required='required'/>
+           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" required='required' default ="Mustafa.mohamad239@gmail.com" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling">Change Password:</p>
-           <FormInput inputType='password' handleChange={handleChange} name="password" placeholder="Enter a Password" />
+           <FormInput inputType='password' handleChange={handleChange} name="password" placeholder="Enter a Password" default ="password" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling">Address:</p>
-           <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
+           <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number"  default = "12" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <br></br>
-           <FormInput handleChange={handleChange} name="street_address" placeholder="Street Address" />
+           <FormInput handleChange={handleChange} name="street_address" placeholder="Street Address" default = "New Street" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <br></br>
-           <FormInput handleChange={handleChange} name="town" placeholder="Town/City"/>
+           <FormInput handleChange={handleChange} name="town" placeholder="Town/City" default = "Birmingham" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <br></br>
-           <FormInput handleChange={handleChange} name="region" placeholder="Region" />
+           <FormInput handleChange={handleChange} name="region" placeholder="Region" default = "West Midlands" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <br></br>
-           <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
-           <br></br>
-           <br></br>
+           <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" default = "B4 5QE" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <br></br>
            <br></br>
-           <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
+           <br></br>
+           <br></br>
+           <LittleGreenButton handleClick={submitUser} className="little-green-button" buttonText={"Save Changes"}/>
 
 
          </div>

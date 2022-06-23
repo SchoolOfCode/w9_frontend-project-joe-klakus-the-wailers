@@ -9,10 +9,12 @@ import LittleGreenButton from "../Button/LittleGreenButtonIndex";
 import DropDown from "../DropDown/DropDownIndex";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = ({id, token }) => {
 	const [events, setEvents] = useState("");
 	const [visible, setVisible] = useState("none");
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		//get the events
@@ -41,7 +43,7 @@ const MainPage = ({id, token }) => {
 						src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
 						alt="Bootcamper Social Logo"
 					/>
-					<p className="profile-icon">{id}</p>
+					<p className="profile-icon" onClick={()=>{navigate("/updateu")}}>{id}</p>
 				</header>
 
 				<p className="search-bar-label">Search By Event, Host or Region</p>
