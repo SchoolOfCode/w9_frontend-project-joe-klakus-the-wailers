@@ -94,7 +94,19 @@ const ProfilePage = ({id}) => {
            <br></br>
            <br></br>
            <br></br>
+<<<<<<< HEAD
            <LittleGreenButton handleClick={submitUser} className="little-green-button" buttonText={"Save Changes"}/>
+=======
+           <LittleGreenButton className="little-green-button" buttonText={"Save Changes"}/>
+           <br></br>
+           <br></br>
+           <br></br>
+           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Log Out"}/>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+>>>>>>> 93dbe33e2fdcf19f47ca61b759c34142e427da4e
 
 
          </div>
