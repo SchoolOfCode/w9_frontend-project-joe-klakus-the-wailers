@@ -38,17 +38,15 @@ function App() {
 
 return (
   <div className="app">
-  {/* <BrowserRouter>
-  <Routes> */}
-  {/* <Route index element={(!token) ? <Login text=""/> : <MainPage></MainPage>}/>
-  <Route path="/newu" element={<CreateUser text=""/> }></Route> */}
-  {/* <Route path="/newe" element={<CreateEvent id={id} text=""/> }></Route> */}
-  {/* <Route path="/updateu" element={<ProfilePage id={id} text=""/>}></Route>
-  <Route path="/main" element={<MainPage text=""/>}></Route> */}
-  {/* </Routes>
-  </BrowserRouter> */}
-  <CreateEvent id={id} text=""/>
-  <MainPage text=""/>
+  <BrowserRouter>
+  <Routes>
+  <Route index element={(!token) ? <Login text=""/> : <MainPage></MainPage>}/>
+  <Route path="/newu" element={<CreateUser text=""/> }></Route>
+  `<Route path="/newe" element={<CreateEvent id={id} text=""/> }></Route>`
+  <Route path="/updateu" element={<ProfilePage id={id} text=""/>}></Route>
+  <Route path="/main" element={<MainPage text=""/>}></Route>
+  </Routes>
+  </BrowserRouter>
   </div>
 );
 }
