@@ -7,9 +7,9 @@ import { useState } from "react";
 import Map from "../App/Components/map/map.js";
 import { useNavigate } from "react-router";
 
-const CreateEvent = ({id}) => {
+const CreateEvent = (props) => {
   const [inputValue, setInputValue] = useState([{}]);
-
+  console.log(props.id)
   const navigate = useNavigate();
 
   function handleChange(event) {
@@ -29,7 +29,7 @@ const CreateEvent = ({id}) => {
         },
         body: JSON.stringify({
           name_of_event: inputValue.name_of_event, /// Some values are hardcoded need to fix later
-          event_host: {id},
+          event_host: props.id,
           start_time: "2004-10-19T09:23:54.000Z",
           end_time: "2004-10-19T12:23:54.000Z",
           description: inputValue.description,
@@ -56,7 +56,7 @@ const CreateEvent = ({id}) => {
           src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
           alt="Bootcamper Social Logo"
         />
-        <p className="profile-icon" onClick={()=>{navigate("/main")}}>{id}</p>
+        <p className="profile-icon" onClick={()=>{navigate("/main")}}>{props.id}</p>
       </header>
 
       <br></br>
