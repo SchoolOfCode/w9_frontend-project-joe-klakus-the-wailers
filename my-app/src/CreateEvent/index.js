@@ -135,7 +135,7 @@ const CreateEvent = ({id}) => {
           placeholder="Say a little about your Event. Is it just a social? Is it a Study Session? The more the merrier."
         />
 
-        <p className="create-account-styling">Profile Picture:</p>
+        <p className="create-account-styling">Event Logo:</p>
         <OrangeButton
           className="orange-button"
           buttonText={"Upload from your Device"}
