@@ -118,9 +118,15 @@ const CreateEvent = ({id}) => {
         />
 
         <p className="create-account-styling">Start Time:</p>
-        <FormInput handleChange={handleChange} name="start_time" />
+        
+
+      <input className="date-time-select" type="datetime-local" id="meeting-time"
+       name="meeting-time" value="2018-06-12T19:30"
+       min="2022-01-01T00:00" max="2100-01-01T00:00"/>
         <p className="create-account-styling">End Time:</p>
-        <FormInput handleChange={handleChange} name="end_time" />
+        <input className="date-time-select" type="datetime-local" id="meeting-time"
+       name="meeting-time" value="2018-06-12T19:30"
+       min="2022-01-01T00:00" max="2100-01-01T00:00"/>
 
         <br></br>
         <p className="create-account-styling">Event Information:</p>
