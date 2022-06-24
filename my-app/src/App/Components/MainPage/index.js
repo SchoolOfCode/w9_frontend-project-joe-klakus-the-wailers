@@ -62,7 +62,7 @@ const MainPage = ({id, token }) => {
 				:""}
 				<br></br>
 
-				<DropDown className="drop-down-styling" />
+				<DropDown />
 
 				{/*
     <p>Filter</p>

@@ -9,7 +9,10 @@ import { useNavigate } from "react-router";
 
 const CreateEvent = (props) => {
   const [inputValue, setInputValue] = useState([{}]);
-  console.log(props.id)
+  const [latLong, setlatLong] = useState('')
+  const [PostEventError, setPostEventError] = useState('')
+
+  console.log(latLong)
   const navigate = useNavigate();
 
   function handleChange(event) {
@@ -39,13 +42,16 @@ const CreateEvent = (props) => {
           town: inputValue.town,
           region: inputValue.region,
           postcode: inputValue.postcode,
-          lat: 51.5073509,
-          long: -0.1277583,
+          lat: latLong.lat,
+          long: latLong.lng,
           userAttending: 1,
         }),
       });
       const content = await rawResponse.json();
-
+      if (content.error) {
+        setPostEventError(content.error)
+        return;
+      }
     })();
   };
   return (
@@ -82,7 +88,7 @@ const CreateEvent = (props) => {
         <br></br>
         <br></br>
         <div id="map">
-          <Map />
+          <Map setlatLong={setlatLong}/>
         </div>
         <br></br>
         <br></br>
@@ -143,6 +149,8 @@ const CreateEvent = (props) => {
           className="orange-button"
           buttonText={"Upload from your Device"}
         />
+        <br></br> 
+        <h1 className='login-error-message'>{PostEventError}</h1>
         <br></br>
         <GreenButton
           handleClick={submitEvent}

@@ -1,7 +1,7 @@
 import { useRef, useMemo, useState, useCallback } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 
-function DraggableMarker({ center }) {
+function DraggableMarker({ center, setlatLong }) {
   const [draggable, setDraggable] = useState(false)
   const [position, setPosition] = useState(center)
   const markerRef = useRef(null)
@@ -11,7 +11,7 @@ function DraggableMarker({ center }) {
         const marker = markerRef.current
         if (marker != null) {
           setPosition(marker.getLatLng())
-          console.log(position)
+          setlatLong(marker._latlng)
         }
       },
     }),
