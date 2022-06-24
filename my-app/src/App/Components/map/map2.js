@@ -2,19 +2,20 @@ import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useState, useEffect } from 'react';
 
-export default function Map() {
-    let locations = [{lat:52.479780, long:-1.897950},{lat:52.471780, long:-1.896950},{lat:52.474780, long:-1.897850},{lat:52.477780, long:-1.894950}]
+export default function Map(props) {
+    // let locations = [{lat:52.479780, long:-1.897950},{lat:52.471780, long:-1.896950},{lat:52.474780, long:-1.897850},{lat:52.477780, long:-1.894950}]
 
     const [posi, setPosi] = useState()
+
 
   useEffect(() => {
       navigator.geolocation.getCurrentPosition(
       location => setPosi([
         location.coords.latitude,
         location.coords.longitude
+        
       ])
     )},[])
-  console.log(posi)
 
   return (
     <div>
@@ -25,10 +26,14 @@ export default function Map() {
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    {locations.map((location) =>
-    <Marker position={[location.lat, location.long]}>
+    {props.events.map((location) =>
+    <Marker key={location.events_id} position={[location.lat, location.long]}>
       <Popup>
-        You Are Here <br /> BRUM JS {location.title}
+      {location.start_time} 
+      <br /> 
+      <strong>{location.name_of_event}</strong>
+      <br />
+      {location.description}
       </Popup>
     </Marker>)}
   </MapContainer>

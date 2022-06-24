@@ -7,8 +7,10 @@ import { useState } from "react";
 import Map from "../App/Components/map/map.js";
 import { useNavigate } from "react-router";
 
-const CreateEvent = ({id}) => {
+const CreateEvent = (props) => {
   const [inputValue, setInputValue] = useState([{}]);
+  const [latLong, setlatLong] = useState('')
+  const [PostEventError, setPostEventError] = useState('')
 
   const navigate = useNavigate();
 
@@ -29,23 +31,27 @@ const CreateEvent = ({id}) => {
         },
         body: JSON.stringify({
           name_of_event: inputValue.name_of_event, /// Some values are hardcoded need to fix later
-          event_host: {id},
-          start_time: "2004-10-19T09:23:54.000Z",
-          end_time: "2004-10-19T12:23:54.000Z",
+          event_host: props.id,
+          start_time: inputValue.start_time,
+          end_time:  inputValue.end_time,
           description: inputValue.description,
           cost: inputValue.cost,
           house_number: inputValue.house_number,
           street_address: inputValue.street_address,
           town: inputValue.town,
           region: inputValue.region,
-          postcode: inputValue.postcode,
-          lat: 51.5073509,
-          long: -0.1277583,
+          postcode: inputValue.postcode, 
+          lat: (latLong.lat) ? latLong.lat : 52.479780,
+          long: (latLong.lng) ? latLong.lng : -1.897950,
           userAttending: 1,
         }),
       });
       const content = await rawResponse.json();
-
+      
+      if (content.error) {
+        setPostEventError(content.error)}
+      else if (content) {
+        setPostEventError('Event was created')}
     })();
   };
   return (
@@ -56,18 +62,20 @@ const CreateEvent = ({id}) => {
           src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
           alt="Bootcamper Social Logo"
         />
-        <p className="profile-icon" onClick={()=>{navigate("/main")}}>{id}</p>
+        <p className="profile-icon" onClick={()=>{navigate("/main")}}>{props.id}</p>
       </header>
 
       <br></br>
 
-      <div className="login-inputs">
+      <form className="login-inputs">
         <h1 className="h1-styling">Create an Event</h1>
         <p className="create-account-styling">Event Name:</p>
         <FormInput
           handleChange={handleChange}
           name="name_of_event"
           placeholder="Event Name Here"
+          required={"required"}
+
         />
          <p className="create-account-styling">Host:</p>
          <FormInput
@@ -82,7 +90,7 @@ const CreateEvent = ({id}) => {
         <br></br>
         <br></br>
         <div id="map">
-          <Map />
+          <Map setlatLong={setlatLong}/>
         </div>
         <br></br>
         <br></br>
@@ -122,11 +130,11 @@ const CreateEvent = ({id}) => {
         
 
       <input className="date-time-select" type="datetime-local" id="meeting-time"
-       name="meeting-time" value="2018-06-12T19:30"
+       name="start_time" onChange={handleChange}
        min="2022-01-01T00:00" max="2100-01-01T00:00"/>
         <p className="create-account-styling">End Time:</p>
         <input className="date-time-select" type="datetime-local" id="meeting-time"
-       name="meeting-time" value="2018-06-12T19:30"
+       name="end_time" onChange={handleChange}
        min="2022-01-01T00:00" max="2100-01-01T00:00"/>
 
         <br></br>
@@ -143,13 +151,16 @@ const CreateEvent = ({id}) => {
           className="orange-button"
           buttonText={"Upload from your Device"}
         />
+        <br></br> 
+        <h1 className='login-error-message'>{PostEventError}</h1>
         <br></br>
         <GreenButton
           handleClick={submitEvent}
           className="green-button"
           buttonText={"Create Event"}
+          type="submit"
         />
-      </div>
+      </form>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import { useState } from 'react';
 import {useNavigate} from "react-router"
 
 const CreateUser = () => {
-
   const [inputValue, setInputValue] = useState([{}])
   //navigate function
   const navigate = useNavigate();
@@ -53,17 +52,16 @@ const CreateUser = () => {
         {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
       </header>  
       <br></br>
-      <div className='login-inputs'> 
-
+      <form className='login-inputs'> 
            <h1 className="h1-styling">Create Account</h1>
            <p className="create-account-styling" >First Name:</p>
            <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name'/>
            <p className="create-account-styling" >Surname:</p>
            <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname'/>
            <p className="create-account-styling">Email Address:</p>
-           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Email Address" />
+           <FormInput handleChange={handleChange} name="email" required={"required"} placeholder="Enter your Email Address" />
            <p className="create-account-styling">Password:</p>
-           <FormInput handleChange={handleChange} name="password" placeholder="Enter a Password" />
+           <FormInput handleChange={handleChange} name="password" required={"required"} placeholder="Enter a Password" />
            <p className="create-account-styling">Address:</p>
            <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
            <br></br>
@@ -74,13 +72,11 @@ const CreateUser = () => {
            <FormInput handleChange={handleChange} name="region" placeholder="Region" />
            <br></br>
            <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
-
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
            <br></br>
-           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Create User"} />
-
-         </div>
+           <GreenButton type={'submit'} handleClick={submitUser} className="green-button" buttonText={"Create User"} />
+         </form>
         </div>
     )
 }

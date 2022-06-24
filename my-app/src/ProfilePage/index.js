@@ -25,7 +25,7 @@ const ProfilePage = ({id}) => {
     function toggleDisable(){
       isDisabled === "none" ? setIsDisabled(true) : setIsDisabled("none");
       isDisabledText === "#e0e0e2" ? setIsDisabledText("var(--primary-blue)") : setIsDisabledText("#e0e0e2");
-      console.log(isDisabled);
+
     }
   
     async function submitUser(){

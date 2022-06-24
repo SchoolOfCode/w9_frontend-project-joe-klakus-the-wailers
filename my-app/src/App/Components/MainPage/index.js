@@ -51,7 +51,7 @@ const MainPage = ({id, token }) => {
 				<br></br>
 				<br></br>
 				<div id="map">
-					<Map />
+				{events && <Map events={events}/>}
 				</div>
 				<br></br>
 				<br></br>
@@ -62,7 +62,7 @@ const MainPage = ({id, token }) => {
 				:""}
 				<br></br>
 
-				<DropDown className="drop-down-styling" />
+				<DropDown />
 
 				{/*
     <p>Filter</p>
@@ -78,7 +78,7 @@ const MainPage = ({id, token }) => {
 				<ul className="event-list-main-page">
 					{events &&
 						events.map((event) => (
-							<li className="expanded-event-container">
+							<li key={event.events_id}className="expanded-event-container">
 								<ExpandedEvent
 									name_of_event={event.name_of_event}
 									cost={event.cost}
