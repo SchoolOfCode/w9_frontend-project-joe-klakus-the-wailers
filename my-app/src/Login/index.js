@@ -60,9 +60,9 @@ const Login = () => {
            {/* <div className='login-inputs'>  */}
            <form>
            <h1 className="h1-styling">Email Address:</h1>
-           <FormInput handleChange={handleChange} name="username" />
+           <FormInput required={"required"} handleChange={handleChange} name="username" />
            <h1 className="h1-styling">Password:</h1>
-           <FormInput inputType='password' handleChange={handleChange} name="password"/>
+           <FormInput inputType='password' required={"required"} handleChange={handleChange} name="password"/>
            <h1 className='login-error-message'>{loginError}</h1>
            <br></br>
            <a className='forgotten-password-link' href="url">Forgotten Username or Password?</a>
@@ -78,7 +78,7 @@ const Login = () => {
            </Link>
            <br></br>
            <p id="guest-login-prompt">Dont want an Account? <br></br>Click Below.</p>
-           <GreenButton handleClick={()=>{navigate("/main")}} className="green-button" buttonText={"Guest Login"}/>
+           <GreenButton type={'submit'} handleClick={()=>{navigate("/main")}} className="green-button" buttonText={"Guest Login"}/>
            <br></br>
            <br></br>
            <br></br>

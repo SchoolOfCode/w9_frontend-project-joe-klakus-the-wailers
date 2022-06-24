@@ -6,7 +6,7 @@ export default function Map(props) {
     // let locations = [{lat:52.479780, long:-1.897950},{lat:52.471780, long:-1.896950},{lat:52.474780, long:-1.897850},{lat:52.477780, long:-1.894950}]
 
     const [posi, setPosi] = useState()
-    console.log(props.events)
+
 
   useEffect(() => {
       navigator.geolocation.getCurrentPosition(
