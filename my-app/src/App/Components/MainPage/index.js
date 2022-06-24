@@ -78,7 +78,7 @@ const MainPage = ({id, token }) => {
 				<ul className="event-list-main-page">
 					{events &&
 						events.map((event) => (
-							<li className="expanded-event-container">
+							<li key={event.events_id}className="expanded-event-container">
 								<ExpandedEvent
 									name_of_event={event.name_of_event}
 									cost={event.cost}

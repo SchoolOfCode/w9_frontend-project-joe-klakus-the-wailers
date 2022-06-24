@@ -27,7 +27,7 @@ export default function Map(props) {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     {props.events.map((location) =>
-    <Marker key={location.event_id} position={[location.lat, location.long]}>
+    <Marker key={location.events_id} position={[location.lat, location.long]}>
       <Popup>
       {location.start_time} 
       <br /> 
