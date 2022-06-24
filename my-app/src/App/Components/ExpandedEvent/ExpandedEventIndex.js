@@ -8,7 +8,7 @@ const ExpandedEvent = (props) => {
         <div>
             <section onClick={props.onClick} className="expanding-events-section">
                 <h1 className="h1-expanding-event">{props.text}</h1>
-                <img style={{ display: props.visible }} className='event-image' alt={props.text} src="https://pbs.twimg.com/profile_images/1408775037998469121/tzArk3Rr_400x400.jpg"  />  
+                <img style={{ display: props.visible }} className='event-image' alt={props.text} src={props.img}  />  
                 <h2 className="h2-expanding-event">{props.name_of_event}</h2>
                 <p style={{ display: props.visible }} className='host-heading'>Hosted by user{props.event_host}</p>
                 <p style={{ display: props.visible }}>Address:<br></br>

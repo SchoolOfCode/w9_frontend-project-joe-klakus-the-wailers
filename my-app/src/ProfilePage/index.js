@@ -73,11 +73,11 @@ const ProfilePage = ({id}) => {
            
         
            <p className="create-account-styling" >First Name:</p>
-           <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name' default= "Mustafa" disabled = {isDisabled} isDisabledText={isDisabledText}/>
+           <FormInput handleChange={handleChange} name="first_name" placeholder='Enter your First Name' default= "Joe" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling" >Surname:</p>
-           <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname' default= "Mohamad" disabled = {isDisabled} isDisabledText={isDisabledText}/>
+           <FormInput handleChange={handleChange} name="last_name" placeholder='Enter your Surname' default= "Blogs" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling">Username:</p>
-           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" required='required' default ="Mustafa.mohamad239@gmail.com" disabled = {isDisabled} isDisabledText={isDisabledText}/>
+           <FormInput handleChange={handleChange} name="email" placeholder="Enter your Username" required='required' default ="joe@email.com" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling">Change Password:</p>
            <FormInput inputType='password' handleChange={handleChange} name="password" placeholder="Enter a Password" default ="password" disabled = {isDisabled} isDisabledText={isDisabledText}/>
            <p className="create-account-styling">Address:</p>

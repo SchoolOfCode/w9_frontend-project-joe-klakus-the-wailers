@@ -17,7 +17,7 @@ function DropDown() {
 // </div>
     <div class="dropdown" mdbDropdown>
     <MDBDropdown>
-      <MDBDropdownToggle className="drop-down-styling">Filter</MDBDropdownToggle>
+      <MDBDropdownToggle mdbBtn color="success" className="drop-down-styling">Filter</MDBDropdownToggle>
       <MDBDropdownMenu>
         <MDBDropdownItem>
           <MDBDropdownLink  className="drop-down-styling" href="#">Date (Start Time)</MDBDropdownLink>

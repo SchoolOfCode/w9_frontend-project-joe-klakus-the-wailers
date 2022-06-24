@@ -61,7 +61,7 @@ const CreateUser = () => {
            <p className="create-account-styling">Email Address:</p>
            <FormInput handleChange={handleChange} name="email" required={"required"} placeholder="Enter your Email Address" />
            <p className="create-account-styling">Password:</p>
-           <FormInput handleChange={handleChange} name="password" required={"required"} placeholder="Enter a Password" />
+           <FormInput handleChange={handleChange} name="password" required={"required"} inputType='password' placeholder="Enter a Password" />
            <p className="create-account-styling">Address:</p>
            <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
            <br></br>
