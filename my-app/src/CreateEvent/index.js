@@ -41,17 +41,18 @@ const CreateEvent = (props) => {
           street_address: inputValue.street_address,
           town: inputValue.town,
           region: inputValue.region,
-          postcode: inputValue.postcode,
-          lat: latLong.lat,
-          long: latLong.lng,
+          postcode: inputValue.postcode, 
+          lat: (latLong.lat) ? latLong.lat : 52.479780,
+          long: (latLong.lng) ? latLong.lng : -1.897950,
           userAttending: 1,
         }),
       });
       const content = await rawResponse.json();
+      
       if (content.error) {
-        setPostEventError(content.error)
-        return;
-      }
+        setPostEventError(content.error)}
+      else if (content) {
+        setPostEventError('Event was created')}
     })();
   };
   return (

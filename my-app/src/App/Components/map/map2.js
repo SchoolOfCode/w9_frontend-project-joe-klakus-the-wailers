@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useState, useEffect } from 'react';
 
 export default function Map(props) {
-    let locations = [{lat:52.479780, long:-1.897950},{lat:52.471780, long:-1.896950},{lat:52.474780, long:-1.897850},{lat:52.477780, long:-1.894950}]
+    // let locations = [{lat:52.479780, long:-1.897950},{lat:52.471780, long:-1.896950},{lat:52.474780, long:-1.897850},{lat:52.477780, long:-1.894950}]
 
     const [posi, setPosi] = useState()
     console.log(props.events)
@@ -27,9 +27,13 @@ export default function Map(props) {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     {props.events.map((location) =>
-    <Marker position={[location.lat, location.long]}>
+    <Marker key={location.event_id} position={[location.lat, location.long]}>
       <Popup>
-        You Are Here <br /> BRUM JS {location.title}
+      {location.start_time} 
+      <br /> 
+      <strong>{location.name_of_event}</strong>
+      <br />
+      {location.description}
       </Popup>
     </Marker>)}
   </MapContainer>

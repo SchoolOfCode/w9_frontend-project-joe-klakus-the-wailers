@@ -53,7 +53,7 @@ const CreateUser = () => {
         {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
       </header>  
       <br></br>
-      <div className='login-inputs'> 
+      <form className='login-inputs'> 
 
            <h1 className="h1-styling">Create Account</h1>
            <p className="create-account-styling" >First Name:</p>
@@ -78,9 +78,8 @@ const CreateUser = () => {
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
            <br></br>
-           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Create User"} />
-
-         </div>
+           <GreenButton type={'submit'} handleClick={submitUser} className="green-button" buttonText={"Create User"} />
+         </form>
         </div>
     )
 }

@@ -58,6 +58,7 @@ const Login = () => {
         </header>
         <br></br>
            {/* <div className='login-inputs'>  */}
+           <form>
            <h1 className="h1-styling">Email Address:</h1>
            <FormInput handleChange={handleChange} name="username" />
            <h1 className="h1-styling">Password:</h1>
@@ -82,7 +83,7 @@ const Login = () => {
            <br></br>
            <br></br>
            <br></br>
-
+           </form>
         </div>
     )
 }
