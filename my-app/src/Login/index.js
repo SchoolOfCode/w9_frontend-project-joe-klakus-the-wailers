@@ -20,7 +20,8 @@ const Login = () => {
     }); 
     }
   
-    async function submitUser(){ 
+    async function submitUser(e){
+      e.preventDefault()
     (async () => {
       const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
@@ -34,18 +35,19 @@ const Login = () => {
         username: inputValue.username,
         password: inputValue.password,})
       });
+     
       const data = await response.json();
       if (data.error) {
         setLoginError(data.error)
+        console.log(data.error)
         return;
       }
+      else if (data.accessToken) {
       let accessToken = data.accessToken;
       const jwtDecoded = jwtDecode(accessToken);
-      // alert(
-      //   `Login Successful! Your id is ${jwtDecoded.user_id} & Your email is ${jwtDecoded.email}`
-      // );
-      window.location.reload(false);
-      
+
+      window.location.reload(false)
+      }
     })();
 
   }

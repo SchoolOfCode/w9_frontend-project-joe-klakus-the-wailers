@@ -43,7 +43,7 @@ const MainPage = ({id, token }) => {
 						src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
 						alt="Bootcamper Social Logo"
 					/>
-					<p className="profile-icon" onClick={()=>{navigate("/updateu")}}>{id}</p>
+					<p className="profile-icon" onClick={()=>{navigate("/updateu")}}>{id === 0 ? 'G' : {id}}</p>
 				</header>
 
 				<p className="search-bar-label">Search By Event, Host or Region</p>
@@ -80,6 +80,7 @@ const MainPage = ({id, token }) => {
 						events.map((event) => (
 							<li key={event.events_id}className="expanded-event-container">
 								<ExpandedEvent
+									img={'https://pbs.twimg.com/profile_images/1408775037998469121/tzArk3Rr_400x400.jpg'}
 									name_of_event={event.name_of_event}
 									cost={event.cost}
 									description={event.description}

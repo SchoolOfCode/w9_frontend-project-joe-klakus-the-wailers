@@ -7,6 +7,7 @@ import {useNavigate} from "react-router"
 
 const CreateUser = () => {
   const [inputValue, setInputValue] = useState([{}])
+  const [createUError, setCreateUError] = useState()
   //navigate function
   const navigate = useNavigate();
 
@@ -18,9 +19,9 @@ const CreateUser = () => {
 
   }
 
-  async function submitUser(){
-    
-  
+  async function submitUser(e){
+    e.preventDefault()
+
   (async () => {
     const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
@@ -40,8 +41,10 @@ const CreateUser = () => {
       postcode: inputValue.postcode})
     });
     const content = await response.json();
-  //Navigates to the login page 
-    navigate("/");
+    if (content.error) {
+      setCreateUError(content.error)
+      return;}
+    else if (content.Success === true){ navigate("/");}
   })();
 }
     return (
@@ -61,7 +64,7 @@ const CreateUser = () => {
            <p className="create-account-styling">Email Address:</p>
            <FormInput handleChange={handleChange} name="email" required={"required"} placeholder="Enter your Email Address" />
            <p className="create-account-styling">Password:</p>
-           <FormInput handleChange={handleChange} name="password" required={"required"} placeholder="Enter a Password" />
+           <FormInput handleChange={handleChange} name="password" required={"required"} inputType='password' placeholder="Enter a Password" />
            <p className="create-account-styling">Address:</p>
            <FormInput handleChange={handleChange} name="house_number" placeholder="House/Flat Name or Number" />
            <br></br>
@@ -74,6 +77,8 @@ const CreateUser = () => {
            <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
+           <br></br>
+           <h1 className='login-error-message'>{createUError}</h1>
            <br></br>
            <GreenButton type={'submit'} handleClick={submitUser} className="green-button" buttonText={"Create User"} />
          </form>

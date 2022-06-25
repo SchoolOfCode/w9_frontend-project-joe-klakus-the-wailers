@@ -21,7 +21,9 @@ const CreateEvent = (props) => {
     });
   }
 
-  const submitEvent = async () => {
+  const submitEvent = async (e) => {
+    e.preventDefault()
+
     (async () => {
       const rawResponse = await fetch("http://localhost:5000/events", {
         method: "POST",
@@ -50,8 +52,9 @@ const CreateEvent = (props) => {
       
       if (content.error) {
         setPostEventError(content.error)}
-      else if (content) {
+      else if (content.Success === true) {
         setPostEventError('Event was created')}
+        navigate("/");
     })();
   };
   return (
