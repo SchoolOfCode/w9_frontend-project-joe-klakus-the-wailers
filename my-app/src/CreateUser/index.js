@@ -7,6 +7,7 @@ import {useNavigate} from "react-router"
 
 const CreateUser = () => {
   const [inputValue, setInputValue] = useState([{}])
+  const [createUError, setCreateUError] = useState()
   //navigate function
   const navigate = useNavigate();
 
@@ -18,9 +19,9 @@ const CreateUser = () => {
 
   }
 
-  async function submitUser(){
-    
-  
+  async function submitUser(e){
+    e.preventDefault()
+    console.log("refresh prevented");
   (async () => {
     const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
@@ -40,8 +41,14 @@ const CreateUser = () => {
       postcode: inputValue.postcode})
     });
     const content = await response.json();
-  //Navigates to the login page 
-    navigate("/");
+    console.log(content)
+    if (content.error) {
+      setCreateUError(content.error)
+      console.log(content.error)
+      return;}
+  //Navigates to the login page
+   
+    else if (content.Success === true){ navigate("/");}
   })();
 }
     return (
@@ -74,6 +81,8 @@ const CreateUser = () => {
            <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
+           <br></br>
+           <h1 className='login-error-message'>{createUError}</h1>
            <br></br>
            <GreenButton type={'submit'} handleClick={submitUser} className="green-button" buttonText={"Create User"} />
          </form>
