@@ -21,7 +21,6 @@ const Login = () => {
     }
   
     async function submitUser(e){
-      e.preventDefault()
     (async () => {
       const response = await fetch('http://localhost:5000/login', {
         method: 'POST',

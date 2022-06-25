@@ -43,7 +43,7 @@ const MainPage = ({id, token }) => {
 						src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
 						alt="Bootcamper Social Logo"
 					/>
-					<p className="profile-icon" onClick={()=>{navigate("/updateu")}}>{id === 0 ? 'G' : {id}}</p>
+					<p className="profile-icon" onClick={()=>{navigate("/updateu")}}>{id === 0 ? 'G' : id}</p>
 				</header>
 
 				<p className="search-bar-label">Search By Event, Host or Region</p>

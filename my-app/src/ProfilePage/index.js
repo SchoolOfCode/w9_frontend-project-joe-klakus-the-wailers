@@ -75,7 +75,7 @@ async function deleteToken() {
         <header className='header'>
         
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
-        <p className='profile-icon' onClick={()=>{navigate("/main")}}>{id === 0 ? 'G' : {id}}</p> 
+        <p className='profile-icon' onClick={()=>{navigate("/main")}}>{id === 0 ? 'G' : id}</p> 
 
         {/* {id > 0 ? {id} : "G"} */}
         

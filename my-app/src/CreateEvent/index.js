@@ -22,8 +22,6 @@ const CreateEvent = (props) => {
   }
 
   const submitEvent = async (e) => {
-    e.preventDefault()
-
     (async () => {
       const rawResponse = await fetch("http://localhost:5000/events", {
         method: "POST",
