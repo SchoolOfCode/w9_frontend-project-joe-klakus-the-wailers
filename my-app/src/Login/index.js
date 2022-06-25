@@ -22,7 +22,6 @@ const Login = () => {
   
     async function submitUser(e){
       e.preventDefault()
-      console.log("refresh prevented"); 
     (async () => {
       const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
@@ -46,7 +45,7 @@ const Login = () => {
       else if (data.accessToken) {
       let accessToken = data.accessToken;
       const jwtDecoded = jwtDecode(accessToken);
-      console.log(data.accessToken)
+
       window.location.reload(false)
       }
     })();

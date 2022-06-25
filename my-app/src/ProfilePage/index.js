@@ -11,6 +11,7 @@ const ProfilePage = ({id}) => {
     const [inputValue, setInputValue] = useState([{}])
     const [isDisabled, setIsDisabled] = useState("none")
     const [isDisabledText, setIsDisabledText] = useState("#e0e0e2")
+    const [createEError, setCreateEError] = useState()
 
     const navigate = useNavigate();
 
@@ -48,8 +49,25 @@ const ProfilePage = ({id}) => {
         postcode: inputValue.postcode})
       });
       const content = await response.json();
-    
+      if (content.error) {
+        setCreateEError(content.error)
+        return;}
+      else if (content.Success === true){ navigate("/");}
     })();
+  }
+    //logs the user out Deletes the token
+async function deleteToken() {
+  const res = await fetch("http://localhost:5000/refresh_token", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    mode: "cors",
+    credentials: "include",
+  });
+  navigate("/");
+  window.location.reload(false)
+  return await res.json()
   }
     return (
         <div>
@@ -57,7 +75,7 @@ const ProfilePage = ({id}) => {
         <header className='header'>
         
         <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
-        <p className='profile-icon' onClick={()=>{navigate("/main")}}>{id}</p> 
+        <p className='profile-icon' onClick={()=>{navigate("/main")}}>{id === 0 ? 'G' : {id}}</p> 
 
         {/* {id > 0 ? {id} : "G"} */}
         
@@ -98,7 +116,9 @@ const ProfilePage = ({id}) => {
            <br></br>
            <br></br>
            <br></br>
-           <LittleRedButton handleClick={submitUser} className="little-red-button" buttonText={"Log Out"}/>
+           <h1 className='login-error-message'>{createEError}</h1>
+           <br></br>
+           <LittleRedButton handleClick={deleteToken} className="little-red-button" buttonText={"Log Out"}/>
            <br></br>
            <br></br>
            <br></br>

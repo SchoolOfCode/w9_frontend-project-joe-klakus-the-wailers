@@ -21,7 +21,7 @@ const CreateUser = () => {
 
   async function submitUser(e){
     e.preventDefault()
-    console.log("refresh prevented");
+
   (async () => {
     const response = await fetch('http://localhost:5000/users', {
       method: 'POST',
@@ -41,13 +41,9 @@ const CreateUser = () => {
       postcode: inputValue.postcode})
     });
     const content = await response.json();
-    console.log(content)
     if (content.error) {
       setCreateUError(content.error)
-      console.log(content.error)
       return;}
-  //Navigates to the login page
-   
     else if (content.Success === true){ navigate("/");}
   })();
 }
