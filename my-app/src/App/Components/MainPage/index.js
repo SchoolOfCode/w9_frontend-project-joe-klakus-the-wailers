@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 const MainPage = ({id, token }) => {
 	const [events, setEvents] = useState("");
-	const [visible, setVisible] = useState("none");
+	// const [visible, setVisible] = useState("none");
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -63,22 +63,10 @@ const MainPage = ({id, token }) => {
 				<br></br>
 
 				<DropDown />
-
-				{/*
-    <p>Filter</p>
-    <ul>
-        <li>Date (Start Time)</li>
-        <li>Date (End Time)</li>
-        <li>Organizer / Host</li>
-        <li>Distance</li>
-        <li>Type of Event</li>
-    </ul>
-*/}
-
 				<ul className="event-list-main-page">
 					{events &&
 						events.map((event) => (
-							<li key={event.events_id}className="expanded-event-container">
+							<li key={event.events_id} className="expanded-event-container">
 								<ExpandedEvent
 									img={'https://pbs.twimg.com/profile_images/1408775037998469121/tzArk3Rr_400x400.jpg'}
 									name_of_event={event.name_of_event}
@@ -95,10 +83,6 @@ const MainPage = ({id, token }) => {
 									start_time={event.start_time}
 									street_address={event.street_address}
 									town={event.town}
-									visible={visible}
-									onClick={() => {
-										visible === "none" ? setVisible("") : setVisible("none");
-									}}
 								/>
 							</li>
 						))}

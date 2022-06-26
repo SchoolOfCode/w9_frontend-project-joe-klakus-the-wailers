@@ -2,16 +2,19 @@ import React from 'react'
 import LittleGreenButton from '../Button/LittleGreenButtonIndex.js'
 import TinyGreenButton from '../Button/TinyGreenButtonIndex'
 import TinyRedButton from '../Button/TinyRedButtonIndex'
+import { useState,  } from "react";
+
 
 const ExpandedEvent = (props) => {
+    const [visible, setVisible] = useState("none");
     return (
         <div>
-            <section onClick={props.onClick} className="expanding-events-section">
+            <section className="expanding-events-section" onClick={() => {visible === "none" ? setVisible("") : setVisible("none")}}>
                 <h1 className="h1-expanding-event">{props.text}</h1>
-                <img style={{ display: props.visible }} className='event-image' alt={props.text} src={props.img}  />  
+                <img style={{ display: visible }} className='event-image' alt={props.text} src={props.img}  />  
                 <h2 className="h2-expanding-event">{props.name_of_event}</h2>
-                <p style={{ display: props.visible }} className='host-heading'>Hosted by user{props.event_host}</p>
-                <p style={{ display: props.visible }}>Address:<br></br>
+                <p style={{ display: visible }} className='host-heading'>Hosted by user{props.event_host}</p>
+                <p style={{ display: visible }}>Address:<br></br>
                 {props.house_number}<br></br>
                 {props.town}<br></br>
                 {props.region},<br></br>
@@ -19,15 +22,15 @@ const ExpandedEvent = (props) => {
                 </p>
 
                 
-                <div style={{ display: props.visible }} className='attending'>
-                <p style={{ display: props.visible }} className='attending-heading'>Attending?</p>
-                <TinyGreenButton style={{ display: props.visible }} className="tiny-green-button" buttonText={"Yes"}/>
-                <TinyRedButton style={{ display: props.visible }} className="tiny-red-button" buttonText={"No"}/>
+                <div style={{ display: visible }} className='attending'>
+                <p style={{ display: visible }} className='attending-heading'>Attending?</p>
+                <TinyGreenButton style={{ display: visible }} className="tiny-green-button" buttonText={"Yes"}/>
+                <TinyRedButton style={{ display: visible }} className="tiny-red-button" buttonText={"No"}/>
                 </div>
                 <br></br>
-                <h2 style={{ display: props.visible }} className="h2-expanding-event">The Low Down</h2>
-                <p style={{ display: props.visible }} className='description-box'>{props.description}</p>
-                <LittleGreenButton style={{ display: props.visible }} className="little-green-button" buttonText={"Get Tickets"}/>
+                <h2 style={{ display: visible }} className="h2-expanding-event">The Low Down</h2>
+                <p style={{ display: visible }} className='description-box'>{props.description}</p>
+                <LittleGreenButton style={{ display: visible, }} className="little-green-button" buttonText={"Get Tickets"}/>
                 <br></br>
                 <br></br>
 
