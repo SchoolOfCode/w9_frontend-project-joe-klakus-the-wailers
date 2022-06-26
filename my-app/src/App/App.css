@@ -540,14 +540,13 @@ padding-right: 3vmin;
   border: none;
   overflow: hidden;
   outline: none;
-  /* display: inline-block; */
   border-radius: 10px;
   color: var(--primary-blue);
   text-align: left;
   font-size: 3vmin;
   padding: 2vmin;
   width: 50vmin;
-  height: 7vmin;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
