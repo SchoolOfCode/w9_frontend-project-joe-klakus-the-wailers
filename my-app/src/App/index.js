@@ -42,7 +42,7 @@ return (
   <Routes>
   <Route index element={(!token) ? <Login text=""/ > : <MainPage id={id} token = {token}></MainPage>}/>
   <Route path="/newu" element={<CreateUser text=""/> }></Route>
-  `<Route path="/newe" element={<CreateEvent id={id} text=""/> }></Route>`
+  <Route path="/newe" element={<CreateEvent id={id} text=""/> }></Route>
   <Route path="/updateu" element={<ProfilePage id={id} text=""/>}></Route>
   <Route path="/main" element={<MainPage text="" id={id} token = {token}/>}></Route>
   </Routes>

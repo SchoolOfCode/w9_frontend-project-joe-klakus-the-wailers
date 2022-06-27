@@ -30,7 +30,7 @@ const ExpandedEvent = (props) => {
                 <br></br>
                 <h2 style={{ display: visible }} className="h2-expanding-event">The Low Down</h2>
                 <p style={{ display: visible }} className='description-box'>{props.description}</p>
-                <LittleGreenButton style={{ display: visible, }} className="little-green-button" buttonText={"Get Tickets"}/>
+                <LittleGreenButton style={{ display: visible }} className="little-green-button" buttonText={"Get Tickets"}/>
                 <br></br>
                 <br></br>
 

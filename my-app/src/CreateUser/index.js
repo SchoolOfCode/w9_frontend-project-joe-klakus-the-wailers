@@ -7,7 +7,7 @@ import {useNavigate} from "react-router"
 
 const CreateUser = () => {
   const [inputValue, setInputValue] = useState([{}])
-  const [createUError, setCreateUError] = useState()
+  const [createUError, setCreateUError] = useState([])
   //navigate function
   const navigate = useNavigate();
 
@@ -39,10 +39,9 @@ const CreateUser = () => {
       postcode: inputValue.postcode})
     });
     const content = await response.json();
-    if (content.error) {
-      setCreateUError(content.error)
-      return;}
-    else if (content.Success === true){ navigate("/");}
+    if (content.errors) {
+      setCreateUError(content.errors)
+    } else if (content.Success === true){navigate("/")}
   })();
 }
     return (
@@ -76,9 +75,11 @@ const CreateUser = () => {
            <p className="create-account-styling">Profile Picture:</p>
            <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
            <br></br>
-           <h1 className='login-error-message'>{createUError}</h1>
+           {createUError.map((error) => (
+            <h1 className='login-error-message'>{error.param + ' ' + error.msg}</h1>
+            ))}
            <br></br>
-           <GreenButton type={'submit'} handleClick={submitUser} className="green-button" buttonText={"Create User"} />
+           <GreenButton type={'submit'} handleClick={(e)=>{e.preventDefault(); submitUser()}} className="green-button" buttonText={"Create User"} />
          </form>
         </div>
     )

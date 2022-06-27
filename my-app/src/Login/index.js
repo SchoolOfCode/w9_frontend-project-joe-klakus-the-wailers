@@ -36,9 +36,10 @@ const Login = () => {
       });
      
       const data = await response.json();
-      if (data.error) {
-        setLoginError(data.error)
-        console.log(data.error)
+      console.log(data)
+      if (data.errors) {
+        setLoginError(data.errors)
+        console.log(data.errors)
         return;
       }
       else if (data.accessToken) {

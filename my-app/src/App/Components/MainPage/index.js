@@ -112,7 +112,7 @@ const MainPage = ({ id, token }) => {
 								events_id={event.events_id}
 								house_number={event.house_number}
 								lat={event.lat}
-								long={event.lat}
+								long={event.long}
 								postcode={event.postcode}
 								region={event.region}
 								start_time={event.start_time}
