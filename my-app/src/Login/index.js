@@ -36,10 +36,8 @@ const Login = () => {
       });
      
       const data = await response.json();
-      console.log(data)
-      if (data.errors) {
-        setLoginError(data.errors)
-        console.log(data.errors)
+      if (data.error) {
+        setLoginError(data.error)
         return;
       }
       else if (data.accessToken) {
@@ -72,7 +70,7 @@ const Login = () => {
            <br></br>
            <br></br>
            {/* </div> */}
-           <GreenButton handleClick={submitUser} className="green-button" buttonText={"Login"}/>
+           <GreenButton handleClick={(e)=>{e.preventDefault(); submitUser()}} className="green-button" buttonText={"Login"}/>
            <br></br>
            <br></br>
            <Link to="/newu">

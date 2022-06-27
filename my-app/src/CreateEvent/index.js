@@ -30,7 +30,7 @@ const CreateEvent = (props) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name_of_event: inputValue.name_of_event, /// Some values are hardcoded need to fix later
+          name_of_event: inputValue.name_of_event,
           event_host: props.id,
           start_time: inputValue.start_time,
           end_time:  inputValue.end_time,
@@ -41,8 +41,8 @@ const CreateEvent = (props) => {
           town: inputValue.town,
           region: inputValue.region,
           postcode: inputValue.postcode, 
-          lat: latLong.lat,// ? latLong.lat : 52.479780,
-          long: latLong.lng,// ? latLong.lng : -1.897950,
+          lat: latLong.lat,
+          long: latLong.lng,
           userAttending: 1,
         }),
       });
@@ -52,6 +52,8 @@ const CreateEvent = (props) => {
       } else if (content.Success === true){navigate("/")}
     })();
   };
+  if (props.id > 0)
+{
   return (
     <div>
       <header className="header">
@@ -62,7 +64,6 @@ const CreateEvent = (props) => {
         />
         <p className="profile-icon" onClick={()=>{navigate("/main")}}>{props.id}</p>
       </header>
-
       <br></br>
       <form className="login-inputs">
         <h1 className="h1-styling">Create an Event</h1>
@@ -161,7 +162,7 @@ const CreateEvent = (props) => {
         />
       </form>
     </div>
-  );
+  )}
 };
 
 export default CreateEvent;
