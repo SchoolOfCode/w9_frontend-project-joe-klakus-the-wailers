@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function GreenButton({ handleClick, buttonText, type }) {
   return (
-      <button type={type} onClick={(e)=>{e.preventDefault(); handleClick()}} className="green-button">
+      <button type={type} onClick={handleClick} className="green-button">
     
         {buttonText}
       </button>

@@ -10,7 +10,7 @@ import { useNavigate } from "react-router";
 const CreateEvent = (props) => {
   const [inputValue, setInputValue] = useState([{}]);
   const [latLong, setlatLong] = useState('')
-  const [PostEventError, setPostEventError] = useState('')
+  const [PostEventError, setPostEventError] = useState([])
 
   const navigate = useNavigate();
 
@@ -41,18 +41,15 @@ const CreateEvent = (props) => {
           town: inputValue.town,
           region: inputValue.region,
           postcode: inputValue.postcode, 
-          lat: (latLong.lat) ? latLong.lat : 52.479780,
-          long: (latLong.lng) ? latLong.lng : -1.897950,
+          lat: latLong.lat,// ? latLong.lat : 52.479780,
+          long: latLong.lng,// ? latLong.lng : -1.897950,
           userAttending: 1,
         }),
       });
       const content = await rawResponse.json();
-      
-      if (content.error) {
-        setPostEventError(content.error)}
-      else if (content.Success === true) {
-        setPostEventError('Event was created')}
-        navigate("/");
+      if (content.errors) {
+        setPostEventError(content.errors)
+      } else if (content.Success === true){navigate("/")}
     })();
   };
   return (
@@ -67,7 +64,6 @@ const CreateEvent = (props) => {
       </header>
 
       <br></br>
-
       <form className="login-inputs">
         <h1 className="h1-styling">Create an Event</h1>
         <p className="create-account-styling">Event Name:</p>
@@ -153,10 +149,12 @@ const CreateEvent = (props) => {
           buttonText={"Upload from your Device"}
         />
         <br></br> 
-        <h1 className='login-error-message'>{PostEventError}</h1>
+        {PostEventError.map((error, i) => (
+            <h1 key={i} className='login-error-message'>{error.msg}</h1>
+            ))}
         <br></br>
         <GreenButton
-          handleClick={submitEvent}
+          handleClick={(e)=>{e.preventDefault(); submitEvent()}}
           className="green-button"
           buttonText={"Create Event"}
           type="submit"

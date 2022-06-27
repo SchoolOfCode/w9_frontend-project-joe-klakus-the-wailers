@@ -146,25 +146,6 @@
   transition: all var(--transition-time);
 }
 /* ------------------------------------------------------------- */
-.drop-down-styling{
-  font-weight: bold;
-  font-family: var(--font);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  outline: none;
-  display: inline-block;
-  border-radius: 10px;
-  color: var(--primary-blue);
-  text-align: left;
-  font-size: 3vmin;
-  padding: 2vmin;
-  width: 50vmin;
-  height: 7vmin;
-}
-
-/* ------------------------------------------------------------- */
 
 /* ALL  BUTTON STYLING */
 .green-button:hover {opacity: 0.8}
@@ -526,8 +507,47 @@ padding-right: 3vmin;
   max-width: 60vmin;
 }
 
+/* ------------------------------------------------------------- */
+/* FILTERS DROPDOWN MENU */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-weight: bold;
+  font-family: var(--font);
+  text-align: left;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
 
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
 
+/* ------------------------------------------------------------- */
+.drop-down-styling{
+  font-weight: bold;
+  font-family: var(--font);
+  background: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  border-radius: 10px;
+  color: var(--primary-blue);
+  text-align: left;
+  font-size: 3vmin;
+  padding: 2vmin;
+  width: 50vmin;
+
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
