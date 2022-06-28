@@ -7,13 +7,22 @@ import { useState,  } from "react";
 
 const ExpandedEvent = (props) => {
     const [visible, setVisible] = useState("none");
+
+    //Formats the date into readable string
+    const formatDate = (dateString) => {
+        const options = { year: "numeric", month: "long", day: "numeric" }
+        return new Date(dateString).toLocaleTimeString(undefined, options)
+      }
+
     return (
         <div>
             <section className="expanding-events-section" onClick={() => {visible === "none" ? setVisible("") : setVisible("none")}}>
                 <h1 className="h1-expanding-event">{props.text}</h1>
                 <img style={{ display: visible }} className='event-image' alt={props.text} src={props.img}  />  
                 <h2 className="h2-expanding-event">{props.name_of_event}</h2>
-                <p style={{ display: visible }} className='host-heading'>Hosted by user{props.event_host}</p>
+                <p style={{ display: visible }} className='host-heading'>Hosted by {props.name_of_event_host}</p>
+                <p style={{ display: visible }} className='start-time'>Starts {formatDate(props.start_time)}</p>
+                <p style={{ display: visible }} className='end-time'>Ends {formatDate(props.end_time)}</p>
                 <p style={{ display: visible }}>Address:<br></br>
                 {props.house_number}<br></br>
                 {props.town}<br></br>

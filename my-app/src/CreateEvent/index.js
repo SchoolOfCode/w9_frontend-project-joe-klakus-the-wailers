@@ -32,6 +32,7 @@ const CreateEvent = (props) => {
         body: JSON.stringify({
           name_of_event: inputValue.name_of_event,
           event_host: props.id,
+          name_of_event_host: inputValue.name_of_event_host,
           start_time: inputValue.start_time,
           end_time:  inputValue.end_time,
           description: inputValue.description,
@@ -44,7 +45,7 @@ const CreateEvent = (props) => {
           lat: latLong.lat,
           long: latLong.lng,
           userAttending: 1,
-        }),
+        }), 
       });
       const content = await rawResponse.json();
       if (content.errors) {
@@ -78,7 +79,7 @@ const CreateEvent = (props) => {
          <p className="create-account-styling">Host:</p>
          <FormInput
           handleChange={handleChange}
-          name="event_host"
+          name="name_of_event_host"
           placeholder="Individual or Company Name"
         />  
 

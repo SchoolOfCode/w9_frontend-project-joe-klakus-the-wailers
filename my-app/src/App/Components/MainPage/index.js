@@ -37,13 +37,21 @@ const MainPage = ({ id, token }) => {
 		const sortArray = type => {
 			const types = {
 				name_of_event: 'name_of_event',
-				event_host: 'event_host',
+				name_of_event_host: 'name_of_event_host',
 				start_time: 'start_time',
 				end_time: 'end_time',
 			};
 			const sortProperty = types[type];
 			const sorted = [...data].sort((a, b) => {
-				return  b[sortProperty] - a[sortProperty] ;
+				if (sortProperty === 'name_of_event') {
+					return a.name_of_event.localeCompare(b.name_of_event);
+
+				} else if (sortProperty === 'name_of_event_host') {
+					return a.name_of_event_host.localeCompare(b.name_of_event_host);
+				  
+				} else {
+					return   Date.parse(a[sortProperty]) - Date.parse(b[sortProperty]) ;
+				  }
 			});
 			setEvents(sorted);
 		  };
@@ -90,7 +98,7 @@ const MainPage = ({ id, token }) => {
 					<select onChange={e => setSortType(e.target.value)} className="drop-down-styling">
 						<option value="start_time">Date (Start Time)</option>
 						<option value="end_time">Date (End Time)</option>
-						<option value="event_host">Organizer</option>
+						<option value="name_of_event_host">Organizer</option>
 						<option value="Distance">Distance</option>
 						<option value="name_of_event">Name of Event</option>
 					</select>
@@ -101,14 +109,13 @@ const MainPage = ({ id, token }) => {
 					events.map((event) => (
 						<li key={event.events_id} className="expanded-event-container">
 							<ExpandedEvent
-								img={
-									"https://pbs.twimg.com/profile_images/1408775037998469121/tzArk3Rr_400x400.jpg"
-								}
+								img={event.img_url}
 								name_of_event={event.name_of_event}
 								cost={event.cost}
 								description={event.description}
 								end_time={event.end_time}
 								event_host={event.event_host}
+								name_of_event_host={event.name_of_event_host}
 								events_id={event.events_id}
 								house_number={event.house_number}
 								lat={event.lat}
