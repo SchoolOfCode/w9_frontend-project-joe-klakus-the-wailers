@@ -58,7 +58,7 @@ const Login = () => {
       <header className="header">
         <img
           className="our-logo"
-          src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
+          src="/mainLogo.png"
           alt="Bootcamper Social Logo"
         />
         </header>

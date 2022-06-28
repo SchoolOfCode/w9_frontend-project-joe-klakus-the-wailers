@@ -65,5 +65,4 @@ function App() {
 		</div>
 	);
 }
-//Push
 export default App;

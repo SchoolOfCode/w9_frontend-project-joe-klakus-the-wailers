@@ -42,8 +42,6 @@ const ProfilePage = ({ id }) => {
       //saves the encrypted token to state (bad practice i think needs to be changed later)
       const response = await res.json();
       setUserDetails(response);
-      console.log(id);
-      console.log(userDetails);
     }
     //runs the function
     fetchUserDetails();
@@ -98,7 +96,7 @@ const ProfilePage = ({ id }) => {
       <header className="header">
         <img
           className="our-logo"
-          src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
+          src="/mainLogo.png"
           alt="Bootcamper Social Logo"
         />
         <p

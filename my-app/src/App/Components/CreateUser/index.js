@@ -48,8 +48,7 @@ const CreateUser = () => {
         <div>
 
        <header className='header'>
-        <img className='our-logo' src="https://i.ibb.co/SJKYb1L/logov1-copy.png" alt="Bootcamper Social Logo"/>
-        {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
+        <img className='our-logo' src="/mainLogo.png" alt="Bootcamper Social Logo"/>
       </header>  
       <br></br>
       <form className='login-inputs'> 

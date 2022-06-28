@@ -1,4 +1,4 @@
-//decodes the access token to be able to use the information in front end
+//Decodes the access token to be able to use the information in the front end
 function b64DecodeUnicode(str) {
     return decodeURIComponent(
       atob(str).replace(/(.)/g, function (m, p) {
@@ -11,7 +11,7 @@ function b64DecodeUnicode(str) {
     );
   }
   
-  function base64_url_decode(str) {
+  function base64UrlDecode(str) {
     var output = str.replace(/-/g, "+").replace(/_/g, "/");
     switch (output.length % 4) {
       case 0:
@@ -37,7 +37,7 @@ function b64DecodeUnicode(str) {
     options = options || {};
     var pos = options.header === true ? 0 : 1;
     try {
-      return JSON.parse(base64_url_decode(token.split(".")[pos]));
+      return JSON.parse(base64UrlDecode(token.split(".")[pos]));
     } catch (e) {
       console.log(e.message);
     }
