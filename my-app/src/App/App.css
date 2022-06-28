@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&family=Lato:ital,wght@0,300;0,400;0,900;1,700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&family=Lato:ital,wght@0,300;0,400;0,900;1,700&display=swap");
 
 /* VARIABLES */
 
-:root{
+:root {
   --primary-blue: #003049;
-  --primary-green: #0B6E4F;
-  --primary-orange: #FA9F42;
-  --primary-red: #D62828;
-  --secondary-red:#7A1616;
-  --primary-grey: #E0E0E2;
-  --font: 'Bitter', serif;
-  --transition-time: 0,2s;
+  --primary-green: #0b6e4f;
+  --primary-orange: #fa9f42;
+  --primary-red: #d62828;
+  --secondary-red: #7a1616;
+  --primary-grey: #e0e0e2;
+  --font: "Bitter", serif;
+  --transition-time: 0, 2s;
   --white: white;
-
 }
 
 /* ------------------------------------------------------------- */
@@ -24,13 +21,13 @@
   text-align: center;
   font-family: var(--font);
   /* max-width: 700px; */
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 /* ------------------------------------------------------------- */
 
 /* ALL HEADING STYLING */
 
-.h1-styling{
+.h1-styling {
   font-size: 6vmin;
   color: var(--primary-blue);
   -webkit-transition: all var(--transition-time);
@@ -43,16 +40,14 @@
 
 /* ------------------------------------------------------------- */
 /* LOGIN ERROR STYLING */
-.login-error-message{
+.login-error-message {
   font-size: 3vmin;
   color: var(--primary-red);
 }
 
-
-
 /* ------------------------------------------------------------- */
 /* MAP CONTAINER */
-.leaflet-container { 
+.leaflet-container {
   height: 80vmin;
   width: 80%;
   margin: 0 auto;
@@ -60,16 +55,16 @@
 }
 /* ------------------------------------------------------------- */
 /* MAIN PAGE STYLING */
-.search-bar-label{
+.search-bar-label {
   font-weight: bold;
   font-family: var(--font);
   font-size: 4vmin;
   text-align: center;
   color: var(--primary-blue);
- margin:0px;
+  margin: 0px;
 }
 
-.expanded-event-container{
+.expanded-event-container {
   background-color: var(--primary-orange);
   color: var(--primary-blue);
   border-radius: 10px;
@@ -85,8 +80,8 @@
   margin-top: 5px;
 }
 
-.event-list-main-page{
-  margin:0px;
+.event-list-main-page {
+  margin: 0px;
   list-style: none;
   font-weight: bold;
   font-family: var(--font);
@@ -103,8 +98,7 @@
   transition: all var(--transition-time);
 }
 
-
-.attending-heading{
+.attending-heading {
   margin-bottom: 3px;
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
@@ -112,7 +106,7 @@
   transition: all var(--transition-time);
 }
 
-.description-box{
+.description-box {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 0px;
@@ -121,7 +115,7 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
 }
-.h2-expanding-event{
+.h2-expanding-event {
   margin-bottom: 5px;
   margin-top: 10px;
   -webkit-transition: all var(--transition-time);
@@ -129,7 +123,7 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
 }
-.host-heading{
+.host-heading {
   margin-top: 2px;
   margin-bottom: 10px;
   -webkit-transition: all var(--transition-time);
@@ -137,7 +131,7 @@
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
 }
-.event-image{
+.event-image {
   border-radius: 10px;
   height: 15vmin;
   -webkit-transition: all var(--transition-time);
@@ -148,16 +142,29 @@
 /* ------------------------------------------------------------- */
 
 /* ALL  BUTTON STYLING */
-.green-button:hover {opacity: 0.8}
-.orange-button:hover {opacity: 0.8}
-.red-button:hover {opacity: 0.8}
-.little-green-button:hover {opacity: 0.8}
-.little-red-button:hover {opacity: 0.8}
-.tiny-green-button:hover {opacity: 0.8}
-.tiny-red-button:hover {opacity: 0.8}
+.green-button:hover {
+  opacity: 0.8;
+}
+.orange-button:hover {
+  opacity: 0.8;
+}
+.red-button:hover {
+  opacity: 0.8;
+}
+.little-green-button:hover {
+  opacity: 0.8;
+}
+.little-red-button:hover {
+  opacity: 0.8;
+}
+.tiny-green-button:hover {
+  opacity: 0.8;
+}
+.tiny-red-button:hover {
+  opacity: 0.8;
+}
 
-
-.green-button{
+.green-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-green);
@@ -179,8 +186,7 @@
   transition: 0.3s;
 }
 
-
-.orange-button{
+.orange-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-orange);
@@ -189,7 +195,7 @@
   color: var(--primary-blue);
   text-align: center;
   font-size: 3vmin;
-  
+
   width: 60vmin;
   height: 7vmin;
   -webkit-transition: all var(--transition-time);
@@ -203,9 +209,7 @@
   transition: 0.3s;
 }
 
-
-
-.red-button{
+.red-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-red);
@@ -214,7 +218,7 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  
+
   width: 60vmin;
   height: 7vmin;
   -webkit-transition: all var(--transition-time);
@@ -226,11 +230,9 @@
   margin-top: 5px;
   opacity: 1;
   transition: 0.3s;
-
-
 }
 
-.little-red-button{
+.little-red-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-red);
@@ -239,7 +241,7 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  
+
   width: 30vmin;
   height: 8vmin;
   -webkit-transition: all var(--transition-time);
@@ -252,7 +254,7 @@
   transition: 0.3s;
 }
 
-.little-green-button{
+.little-green-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-green);
@@ -261,7 +263,7 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-  
+
   width: 30vmin;
   height: 8vmin;
   -webkit-transition: all var(--transition-time);
@@ -274,7 +276,7 @@
   transition: 0.3s;
 }
 
-.tiny-green-button{
+.tiny-green-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-green);
@@ -297,7 +299,7 @@
   transition: 0.3s;
 }
 
-.tiny-red-button{
+.tiny-red-button {
   font-weight: bold;
   font-family: var(--font);
   background: var(--primary-red);
@@ -321,10 +323,9 @@
 }
 /* ------------------------------------------------------------- */
 
-
 /* LOGIN PAGE STYLING */
 
-#guest-login-prompt{
+#guest-login-prompt {
   font-family: var(--font);
   font-size: 2.5vmin;
   color: var(--primary-blue);
@@ -334,14 +335,13 @@
   transition: all var(--transition-time);
 }
 
-.login-inputs{
+.login-inputs {
   display: inline-block;
   justify-content: flex-start;
   /* background-color: #61dafb; */
 }
 
-
-.forgotten-password-link{
+.forgotten-password-link {
   font-family: var(--font);
   font-size: 2.5vmin;
   color: var(--primary-red);
@@ -349,12 +349,11 @@
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  
 }
-.forgotten-password-link:visited{
+.forgotten-password-link:visited {
   font-family: var(--font);
   font-size: 2.5vmin;
-  color:var(--secondary-red);
+  color: var(--secondary-red);
   -webkit-transition: all var(--transition-time);
   -moz-transition: all var(--transition-time);
   -o-transition: all var(--transition-time);
@@ -363,8 +362,7 @@
 /* ------------------------------------------------------------- */
 /* TEXT INPUT STYLING (PRIMARY) */
 
-.inputclass{
-  
+.inputclass {
   font-family: var(--font);
   display: inline-block;
   border-radius: 10px;
@@ -385,7 +383,7 @@
 /* ------------------------------------------------------------- */
 /* CREATE USER STYLING (<P>) */
 
-.create-account-styling{
+.create-account-styling {
   font-weight: bold;
   font-family: var(--font);
   font-size: 4vmin;
@@ -393,13 +391,12 @@
   padding: left 5vmin;
   color: var(--primary-blue);
   padding-left: 25px;
-  
 }
 
 /* ------------------------------------------------------------- */
 
 /* CREATE EVENT STYLING */
-.large-text-input{
+.large-text-input {
   font-family: var(--font);
   display: inline-block;
   border-radius: 10px;
@@ -417,8 +414,7 @@
   transition: all var(--transition-time);
 }
 
-.date-time-select{
-  
+.date-time-select {
   font-family: var(--font);
   background: white;
   display: inline-block;
@@ -435,16 +431,13 @@
   -moz-transition: all var(--transition-time);
   -o-transition: all var(--transition-time);
   transition: all var(--transition-time);
-padding-left: 1vmin;
-padding-right: 3vmin;
-  
-
+  padding-left: 1vmin;
+  padding-right: 3vmin;
 }
-
 
 /* ------------------------------------------------------------- */
 /* HEADER STYLING */
-.header{
+.header {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -491,10 +484,9 @@ padding-right: 3vmin;
   margin: 10px;
 }
 
-
 /* ------------------------------------------------------------- */
 /* PROFILE PAGE STYLING */
-.profile-page-button-and-icon-spacing{
+.profile-page-button-and-icon-spacing {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
@@ -521,7 +513,7 @@ padding-right: 3vmin;
   text-align: left;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
 }
@@ -532,7 +524,7 @@ padding-right: 3vmin;
 }
 
 /* ------------------------------------------------------------- */
-.drop-down-styling{
+.drop-down-styling {
   font-weight: bold;
   font-family: var(--font);
   background: transparent;
@@ -546,7 +538,6 @@ padding-right: 3vmin;
   font-size: 3vmin;
   padding: 2vmin;
   width: 50vmin;
-
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -555,17 +546,7 @@ padding-right: 3vmin;
   }
 }
 
-
-
-
 /* ------------------------------------------------------------- */
-
-
-
-
-
-
-
 
 .App-header {
   background-color: #282c34;
@@ -590,5 +571,3 @@ padding-right: 3vmin;
     transform: rotate(360deg);
   }
 }
-
-
