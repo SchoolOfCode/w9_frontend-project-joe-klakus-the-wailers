@@ -11,13 +11,12 @@ const MainPage = ({ id, token }) => {
   const [events, setEvents] = useState("");
   const [data, setData] = useState("");
   const [sortType, setSortType] = useState("albums");
-  // const [visible, setVisible] = useState("none");
   const navigate = useNavigate();
 
   //Gets GPS Position and works out distances TODO
 
   useEffect(() => {
-    //get the events
+    //gets the events
     async function fetchData() {
       const res = await fetch("http://localhost:5000/events", {
         headers: {
@@ -27,7 +26,7 @@ const MainPage = ({ id, token }) => {
         credentials: "include",
       });
       const data = await res.json();
-      const NewData = setData(data.Payload);
+      setData(data.Payload);
       return data;
     }
     //runs the function
@@ -35,7 +34,8 @@ const MainPage = ({ id, token }) => {
   }, []);
 
   useEffect(() => {
-    //sorts the data
+    //sorts the data using a sorting table linked to the filters dropdown
+    //Currently the sort by location does not have a function TODO
     const sortArray = (type) => {
       const types = {
         name_of_event: "name_of_event",
@@ -70,7 +70,7 @@ const MainPage = ({ id, token }) => {
         <p
           className="profile-icon"
           onClick={() => {
-            navigate("/updateu");
+            navigate("/updateUserPage");
           }}
         >
           {id === 0 ? "G" : id}
@@ -85,7 +85,7 @@ const MainPage = ({ id, token }) => {
       <br></br>
       <br></br>
       {token ? (
-        <Link to="/newe">
+        <Link to="/newEventPage">
           <GreenButton className="green-button" buttonText={"Add an Event"} />
         </Link>
       ) : (
@@ -94,6 +94,7 @@ const MainPage = ({ id, token }) => {
       <br></br>
 
       <div>
+      {/*Renders the filter menu*/}
         <div className="dropdown">
           <select
             onChange={(e) => setSortType(e.target.value)}
@@ -107,6 +108,7 @@ const MainPage = ({ id, token }) => {
           </select>
         </div>
       </div>
+       {/*Renders the events list*/}
       <ul className="event-list-main-page">
         {events &&
           events.map((event) => (
