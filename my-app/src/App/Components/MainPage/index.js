@@ -14,6 +14,8 @@ const MainPage = ({ id, token }) => {
 	// const [visible, setVisible] = useState("none");
 	const navigate = useNavigate();
 
+	//Gets GPS Position and works out distances TODO
+
 	useEffect(() => {
 		//get the events
 		async function fetchData() {
@@ -25,6 +27,7 @@ const MainPage = ({ id, token }) => {
 				credentials: "include",
 			});
 			const data = await res.json();
+			const NewData = 
 			setData(data.Payload);
 			return data;
 		}
@@ -99,7 +102,7 @@ const MainPage = ({ id, token }) => {
 						<option value="start_time">Date (Start Time)</option>
 						<option value="end_time">Date (End Time)</option>
 						<option value="name_of_event_host">Organizer</option>
-						<option value="Distance">Distance</option>
+						<option value="distance">Distance</option>
 						<option value="name_of_event">Name of Event</option>
 					</select>
 				</div>
