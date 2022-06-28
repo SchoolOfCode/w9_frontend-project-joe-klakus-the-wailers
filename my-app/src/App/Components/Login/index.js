@@ -1,11 +1,11 @@
 import React from "react";
-import FormInput from "../App/Components/InputTypeText/Input-Index";
-import GreenButton from "../App/Components/Button/GreenButtonIndex";
-import OrangeButton from "../App/Components/Button/OrangeButtonIndex";
+import FormInput from "../InputTypeText/Input-Index";
+import GreenButton from "../Button/GreenButtonIndex";
+import OrangeButton from "../Button/OrangeButtonIndex";
 import "../App/App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { jwtDecode } from "../App/jwt-decode.js";
+import { jwtDecode } from "../../jwt-decode.js";
 import { useNavigate } from "react-router";
 
 const Login = () => {

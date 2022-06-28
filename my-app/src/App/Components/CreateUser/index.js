@@ -1,7 +1,7 @@
 import React from 'react'
-import OrangeButton from '../App/Components/Button/OrangeButtonIndex'
-import GreenButton from '../App/Components/Button/GreenButtonIndex'
-import FormInput from '../App/Components/InputTypeText/Input-Index'
+import OrangeButton from '../Button/OrangeButtonIndex'
+import GreenButton from '../Button/GreenButtonIndex'
+import FormInput from '../InputTypeText/Input-Index'
 import { useState } from 'react';
 import {useNavigate} from "react-router"
 

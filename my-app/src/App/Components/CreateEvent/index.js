@@ -1,10 +1,10 @@
 import React from "react";
-import GreenButton from "../App/Components/Button/GreenButtonIndex";
-import OrangeButton from "../App/Components/Button/OrangeButtonIndex";
-import FormInput from "../App/Components/InputTypeText/Input-Index";
-import LargeFormInput from "../App/Components/InputTypeText/LargeInput";
+import GreenButton from "../Button/GreenButtonIndex";
+import OrangeButton from "../Button/OrangeButtonIndex";
+import FormInput from "../InputTypeText/Input-Index";
+import LargeFormInput from "../InputTypeText/LargeInput";
 import { useState } from "react";
-import Map from "../App/Components/map/map.js";
+import Map from "../map/map.js";
 import { useNavigate } from "react-router";
 
 const CreateEvent = (props) => {

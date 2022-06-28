@@ -1,6 +1,6 @@
 import React from "react";
-import LittleRedButton from "../App/Components/Button/LittleRedButtonindex";
-import FormInput from "../App/Components/InputTypeText/Input-Index";
+import LittleRedButton from "../Button/LittleRedButtonindex";
+import FormInput from "../InputTypeText/Input-Index";
 
 const ProfilePageLocked = () => {
   return (
