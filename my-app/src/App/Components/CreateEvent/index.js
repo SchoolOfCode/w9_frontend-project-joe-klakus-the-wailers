@@ -4,7 +4,7 @@ import OrangeButton from "../Button/OrangeButtonIndex";
 import FormInput from "../InputTypeText/Input-Index";
 import LargeFormInput from "../InputTypeText/LargeInput";
 import { useState } from "react";
-import Map from "../map/map.js";
+import CreateEventMap from "../map/CreateEventMap.js";
 import { useNavigate } from "react-router";
 
 const CreateEvent = (props) => {
@@ -96,7 +96,7 @@ const CreateEvent = (props) => {
           <br></br>
           <br></br>
           <div id="map">
-            <Map setlatLong={setlatLong} />
+            <CreateEventMap setlatLong={setlatLong} />
           </div>
           <br></br>
           <br></br>

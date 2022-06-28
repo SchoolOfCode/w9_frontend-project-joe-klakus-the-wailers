@@ -1,9 +1,8 @@
-import L from 'leaflet'
 import { MapContainer, TileLayer } from 'react-leaflet';
 import DraggableMarker from './DraggableMarker.js';
 import { useState, useEffect } from 'react';
 
-export default function Map({setlatLong}) {
+export default function CreateEventMap({setlatLong}) {
     const [posi, setPosi] = useState()
 
   useEffect(() => {

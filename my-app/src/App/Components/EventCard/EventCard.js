@@ -4,7 +4,7 @@ import TinyGreenButton from "../Button/TinyGreenButtonIndex";
 import TinyRedButton from "../Button/TinyRedButtonIndex";
 import { useState } from "react";
 
-const ExpandedEvent = (props) => {
+const EventCard = (props) => {
   const [visible, setVisible] = useState("none");
 
   //Formats the date into readable string
@@ -83,4 +83,4 @@ const ExpandedEvent = (props) => {
   );
 };
 
-export default ExpandedEvent;
+export default EventCard;

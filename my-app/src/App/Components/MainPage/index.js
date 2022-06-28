@@ -1,8 +1,8 @@
 import React from "react";
 import GreenButton from "../Button/GreenButtonIndex";
 import FormInput from "../InputTypeText/Input-Index";
-import ExpandedEvent from "../ExpandedEvent/ExpandedEventIndex";
-import Map from "../map/map2.js";
+import EventCard from "../EventCard/EventCard";
+import MainPageMap from "../map/MainPageMap.js";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -81,7 +81,7 @@ const MainPage = ({ id, token }) => {
       <FormInput name="username-input" placeholder="Search Here" />
       <br></br>
       <br></br>
-      <div id="map">{events && <Map events={events} />}</div>
+      <div id="map">{events && <MainPageMap events={events} />}</div>
       <br></br>
       <br></br>
       {token ? (
@@ -113,7 +113,7 @@ const MainPage = ({ id, token }) => {
         {events &&
           events.map((event) => (
             <li key={event.events_id} className="expanded-event-container">
-              <ExpandedEvent
+              <EventCard
                 img={event.img_url}
                 name_of_event={event.name_of_event}
                 cost={event.cost}
