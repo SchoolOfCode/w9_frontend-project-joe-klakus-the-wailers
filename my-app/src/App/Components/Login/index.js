@@ -2,7 +2,7 @@ import React from "react";
 import FormInput from "../InputTypeText/Input-Index";
 import GreenButton from "../Button/GreenButtonIndex";
 import OrangeButton from "../Button/OrangeButtonIndex";
-import "../App/App.css";
+import "../../App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { jwtDecode } from "../../jwt-decode.js";
@@ -13,6 +13,7 @@ const Login = () => {
   const [loginError, setLoginError] = useState();
   const navigate = useNavigate();
 
+  //Event listener for the input field
   function handleChange(event) {
     setInputValue({
       ...inputValue,
@@ -20,6 +21,7 @@ const Login = () => {
     });
   }
 
+  //Sends a POST request to log in
   async function submitUser(e) {
     (async () => {
       const response = await fetch("http://localhost:5000/login", {
@@ -37,15 +39,18 @@ const Login = () => {
       });
 
       const data = await response.json();
+      //Returns an error if the email or password are incorrect
       if (data.error) {
         setLoginError(data.error);
         return;
-      } else if (data.accessToken) {
-        let accessToken = data.accessToken;
-        const jwtDecoded = jwtDecode(accessToken);
-
+      } else {
         window.location.reload(false);
       }
+        //Stores the access token and decrypts it (in case of additional functionality)
+        //if (data.accessToken) {
+          //   let accessToken = data.accessToken;
+          //   const jwtDecoded = jwtDecode(accessToken);
+         
     })();
   }
   return (
@@ -56,10 +61,8 @@ const Login = () => {
           src="https://i.ibb.co/SJKYb1L/logov1-copy.png"
           alt="Bootcamper Social Logo"
         />
-        {/* <img className='profile-icon' src="https://i.ibb.co/zXrZDfm/Place-Holder-Profile-Pic.png" alt="Profile Photo or Initial Place Holder"/> */}
-      </header>
+        </header>
       <br></br>
-      {/* <div className='login-inputs'>  */}
       <form>
         <h1 className="h1-styling">Email Address:</h1>
         <FormInput
@@ -76,13 +79,13 @@ const Login = () => {
         />
         <h1 className="login-error-message">{loginError}</h1>
         <br></br>
+        {/* Currently not functioning TODO*/}
         <a className="forgotten-password-link" href="url">
           Forgotten Username or Password?
         </a>
         <br></br>
         <br></br>
         <br></br>
-        {/* </div> */}
         <GreenButton
           handleClick={(e) => {
             e.preventDefault();
@@ -93,7 +96,7 @@ const Login = () => {
         />
         <br></br>
         <br></br>
-        <Link to="/newu">
+        <Link to="/newUserPage">
           <OrangeButton
             className="orange-button"
             buttonText={"Create Account"}
@@ -106,7 +109,7 @@ const Login = () => {
         <GreenButton
           type={"submit"}
           handleClick={() => {
-            navigate("/main");
+            navigate("/mainPage");
           }}
           className="green-button"
           buttonText={"Guest Login"}
