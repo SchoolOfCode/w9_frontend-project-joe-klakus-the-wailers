@@ -2,7 +2,7 @@ import React from 'react'
 import LittleGreenButton from '../App/Components/Button/LittleGreenButtonIndex'
 import LittleRedButton from "../App/Components/Button/LittleRedButtonindex" 
 import FormInput from '../App/Components/InputTypeText/Input-Index'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
 
 
@@ -11,6 +11,7 @@ const ProfilePage = ({id}) => {
     const [inputValue, setInputValue] = useState([{}])
     const [isDisabled, setIsDisabled] = useState("none")
     const [isDisabledText, setIsDisabledText] = useState("#e0e0e2")
+    const [userDetails, setUserDetails] = useState([])
     const [createEError, setCreateEError] = useState()
 
     const navigate = useNavigate();
@@ -28,7 +29,26 @@ const ProfilePage = ({id}) => {
       isDisabledText === "#e0e0e2" ? setIsDisabledText("var(--primary-blue)") : setIsDisabledText("#e0e0e2");
 
     }
-  
+    useEffect(() => {
+      //checks to see if the user is logged in ie. has a valid token
+      async function fetchUserDetails() {
+        const res = await fetch(`http://localhost:5000/users/${id}`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "cors",
+          credentials: "include",
+        });
+        //saves the encrypted token to state (bad practice i think needs to be changed later)
+        const response = await res.json();
+        setUserDetails(response);
+        console.log(id)
+        console.log(userDetails)
+      }
+      //runs the function
+      fetchUserDetails();
+    }, []);
+
     async function submitUser(){
     (async () => {
       const response = await fetch(`http://localhost:5000/users/${id}`, {
