@@ -1,8 +1,8 @@
 import "./App.css";
-import Login from "../Login";
-import CreateUser from "../CreateUser";
-import CreateEvent from "../CreateEvent";
-import ProfilePage from "../ProfilePage";
+import Login from "./Components/Login";
+import CreateUser from "./Components/CreateUser";
+import CreateEvent from "./Components/CreateEvent";
+import ProfilePage from "./Components/ProfilePage";
 import MainPage from "./Components/MainPage";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -50,14 +50,14 @@ function App() {
 							)
 						}
 					/>
-					<Route path="/newu" element={<CreateUser text="" />}></Route>
-					<Route path="/newe" element={<CreateEvent id={id} text="" />}></Route>
+					<Route path="/newUserPage" element={<CreateUser text="" />}></Route>
+					<Route path="/newEventPage" element={<CreateEvent id={id} text="" />}></Route>
 					<Route
-						path="/updateu"
+						path="/updateUserPage"
 						element={<ProfilePage id={id} text="" />}
 					></Route>
 					<Route
-						path="/main"
+						path="/mainPage"
 						element={<MainPage text="" id={id} token={token} />}
 					></Route>
 				</Routes>

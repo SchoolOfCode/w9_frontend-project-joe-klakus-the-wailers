@@ -1,7 +1,7 @@
 import React from "react";
-import LittleGreenButton from "../App/Components/Button/LittleGreenButtonIndex";
-import LittleRedButton from "../App/Components/Button/LittleRedButtonindex";
-import FormInput from "../App/Components/InputTypeText/Input-Index";
+import LittleGreenButton from "../Button/LittleGreenButtonIndex";
+import LittleRedButton from "../Button/LittleRedButtonindex";
+import FormInput from "../InputTypeText/Input-Index";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
@@ -10,10 +10,11 @@ const ProfilePage = ({ id }) => {
   const [isDisabled, setIsDisabled] = useState("none");
   const [isDisabledText, setIsDisabledText] = useState("#e0e0e2");
   const [userDetails, setUserDetails] = useState([]);
-  const [createEError, setCreateEError] = useState();
+  const [createEventError, setCreateEventError] = useState();
 
   const navigate = useNavigate();
-
+  
+  //Event listener for the input field
   function handleChange(event) {
     setInputValue({
       ...inputValue,
@@ -21,6 +22,7 @@ const ProfilePage = ({ id }) => {
     });
   }
 
+  //Toggle function to expand the event cards
   function toggleDisable() {
     isDisabled === "none" ? setIsDisabled(true) : setIsDisabled("none");
     isDisabledText === "#e0e0e2"
@@ -47,6 +49,7 @@ const ProfilePage = ({ id }) => {
     fetchUserDetails();
   }, []);
 
+  //Work in progress for the profile page to get the users details to be able to be changed TODO
   async function submitUser() {
     (async () => {
       const response = await fetch(`http://localhost:5000/users/${id}`, {
@@ -69,14 +72,14 @@ const ProfilePage = ({ id }) => {
       });
       const content = await response.json();
       if (content.error) {
-        setCreateEError(content.error);
+        setCreateEventError(content.error);
         return;
       } else if (content.Success === true) {
         navigate("/");
       }
     })();
   }
-  //logs the user out Deletes the token
+  //logs the user out (Deletes the token)
   async function deleteToken() {
     const res = await fetch("http://localhost:5000/refresh_token", {
       method: "DELETE",
@@ -101,13 +104,13 @@ const ProfilePage = ({ id }) => {
         <p
           className="profile-icon"
           onClick={() => {
-            navigate("/main");
+            navigate("/mainPage");
           }}
         >
+        {/* Displays the users' id or "G" at the top right if not logged in*/}
           {id === 0 ? "G" : id}
         </p>
 
-        {/* {id > 0 ? {id} : "G"} */}
       </header>
       <br></br>
 
@@ -215,8 +218,9 @@ const ProfilePage = ({ id }) => {
         <br></br>
         <br></br>
         <br></br>
-        <h1 className="login-error-message">{createEError}</h1>
+        <h1 className="login-error-message">{createEventError}</h1>
         <br></br>
+ 
         <LittleRedButton
           handleClick={deleteToken}
           className="little-red-button"

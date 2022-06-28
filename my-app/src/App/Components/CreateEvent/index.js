@@ -67,7 +67,7 @@ const CreateEvent = (props) => {
           <p
             className="profile-icon"
             onClick={() => {
-              navigate("/main");
+              navigate("/mainPage");
             }}
           >
             {props.id}
