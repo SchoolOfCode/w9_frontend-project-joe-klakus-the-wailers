@@ -4,7 +4,7 @@ import OrangeButton from "../Button/OrangeButtonIndex";
 import FormInput from "../InputTypeText/Input-Index";
 import LargeFormInput from "../InputTypeText/LargeInput";
 import { useState } from "react";
-import CreateEventMap from "../map/CreateEventMap.js";
+import CreateEventMap from "../Map/CreateEventMap.js";
 import { useNavigate } from "react-router";
 
 const CreateEvent = (props) => {

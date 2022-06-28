@@ -2,7 +2,7 @@ import React from "react";
 import GreenButton from "../Button/GreenButtonIndex";
 import FormInput from "../InputTypeText/Input-Index";
 import EventCard from "../EventCard/EventCard";
-import MainPageMap from "../map/MainPageMap.js";
+import MainPageMap from "../Map/MainPageMap.js";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
