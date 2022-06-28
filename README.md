@@ -1,22 +1,80 @@
-# National Bootcamp - Week Nine Project Brief
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
+# Bootcamper Social.
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. Specifically, it might be good to focus on how to enhance the remote experience of a bootcamper, or what can help them with the vast amount of learning there is to do as a new developer. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
+This is the Front End of our Mid-way project for School of Code, we were presented with the task of creating an app that would help a bootcamper through this experience. After some discussion we decided to create an APP centered around meeting other bootcampers outside of Bootcamp Hours.
 
-The high level outcomes from this project should be:
+As of 28/6/2022 the app is not deployed and so you will have to run it locally to view.
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
 
-Your project application might include the following:
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
-- Utilise testing for ensuring robust code
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/SchoolOfCode/w9_frontend-project-joe-klakus-the-wailers.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-app
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+For back end follow this link: https://github.com/SchoolOfCode/w9_backend-project-joe-klakus-the-wailers
+
+
+## Features
+
+Working Features
+- Login
+- Guest login
+- Create account
+- Create event
+- Logout (By clicking profile icon)
+- Expand events on main page
+- Filters work with execption of (Distance)
+
+
+Features That Need Work:
+- Cannot edit profiles
+- Can't use search bar for events
+- Uploading of images , for either profile or logo
+- Converting post code into cordinates and map pinning
+
+
+## Color Reference - All CSS is in App.css
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| --primary-blue | ![#003049](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| --primary-green | ![#0b6e4f](https://via.placeholder.com/10/0b6e4f?text=+) #0b6e4f |
+| --primary-orange | ![#fa9f42](https://via.placeholder.com/10/fa9f42?text=+) #fa9f42 |
+| --primary-red | ![#d62828](https://via.placeholder.com/10/d62828?text=+) #00d1a0 |
+| --secondary-red | ![#7a1616](https://via.placeholder.com/10/7a1616?text=+) #00d1a0 |
+| --primary-grey | ![#e0e0e2](https://via.placeholder.com/10/e0e0e2?text=+) #00d1a0 |
+
+
+
+## Authors
+
+- [@Plume93](https://github.com/Plume93)
+- [@JojokCreator](https://github.com/JojokCreator)
+- [@Musy88](https://github.com/Musy88)
+- [@danielknight261](https://github.com/danielknight261)
+
