@@ -13,6 +13,11 @@
   --transition-time: 0, 2s;
   --white: white;
 }
+/* ------------------------------------------------------------- */
+.transitions{
+
+}
+
 
 /* ------------------------------------------------------------- */
 /* APP STYLING */
@@ -22,6 +27,11 @@
   font-family: var(--font);
   /* max-width: 700px; */
   margin: 0 auto;
+  -webkit-transition: all var(--transition-time);
+  -moz-transition: all var(--transition-time);
+  -o-transition: all var(--transition-time);
+  transition: all var(--transition-time);
+  
 }
 /* ------------------------------------------------------------- */
 
@@ -30,10 +40,6 @@
 .h1-styling {
   font-size: 6vmin;
   color: var(--primary-blue);
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -70,10 +76,6 @@
   border-radius: 10px;
   width: 60vmin;
   text-align: center;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   border: 2px solid var(--primary-blue);
   display: inline-block;
   margin-bottom: 5px;
@@ -92,52 +94,33 @@
   font-size: 3vmin;
   padding: 2vmin;
   width: 60vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
 }
 
 .attending-heading {
   margin-bottom: 3px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
+  
 }
 
 .description-box {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 0px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
+  
 }
 .h2-expanding-event {
   margin-bottom: 5px;
   margin-top: 10px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
+  
 }
 .host-heading {
   margin-top: 2px;
   margin-bottom: 10px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
+  
 }
 .event-image {
   border-radius: 10px;
   height: 15vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
+  
 }
 /* ------------------------------------------------------------- */
 
@@ -175,10 +158,6 @@
   font-size: 3vmin;
   width: 60vmin;
   height: 7vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -198,10 +177,6 @@
 
   width: 60vmin;
   height: 7vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -218,13 +193,8 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-
   width: 60vmin;
   height: 7vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -241,13 +211,8 @@
   color: var(--white);
   text-align: center;
   font-size: 3vmin;
-
   width: 30vmin;
   height: 8vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   align-items: center;
   opacity: 1;
@@ -266,10 +231,6 @@
 
   width: 30vmin;
   height: 8vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   align-items: center;
   opacity: 1;
@@ -287,10 +248,6 @@
   font-size: 3vmin;
   width: 12vmin;
   height: 7vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   align-items: center;
   margin-left: 5px;
@@ -310,10 +267,6 @@
   font-size: 3vmin;
   width: 12vmin;
   height: 7vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   align-items: center;
   margin-left: 5px;
@@ -328,12 +281,7 @@
 #guest-login-prompt {
   font-family: var(--font);
   font-size: 2.5vmin;
-  color: var(--primary-blue);
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
-}
+  color: var(--primary-blue);}
 
 .login-inputs {
   display: inline-block;
@@ -345,19 +293,12 @@
   font-family: var(--font);
   font-size: 2.5vmin;
   color: var(--primary-red);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+ 
 }
 .forgotten-password-link:visited {
   font-family: var(--font);
   font-size: 2.5vmin;
   color: var(--secondary-red);
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
 }
 /* ------------------------------------------------------------- */
 /* TEXT INPUT STYLING (PRIMARY) */
@@ -374,10 +315,6 @@
   width: 75vmin;
   height: 4vmin;
   margin: 15px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
 }
 
 /* ------------------------------------------------------------- */
@@ -408,10 +345,7 @@
   width: 75vmin;
   height: 55vmin;
   margin: 15px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
+
 }
 
 .date-time-select {
@@ -427,10 +361,6 @@
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   padding-left: 1vmin;
   padding-right: 3vmin;
 }
@@ -443,10 +373,6 @@
   justify-content: center;
   align-items: baseline;
   align-items: center;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
 }
 
 /* ------------------------------------------------------------- */
@@ -454,10 +380,6 @@
 .our-logo {
   height: 15vmin;
   pointer-events: none;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   transition: all 0.2s;
 }
 
@@ -476,10 +398,6 @@
   padding: 2vmin;
   width: 5vmin;
   height: 5vmin;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   cursor: pointer;
   margin: 10px;
 }
@@ -492,10 +410,6 @@
   justify-content: space-between;
   align-items: baseline;
   align-items: center;
-  -webkit-transition: all var(--transition-time);
-  -moz-transition: all var(--transition-time);
-  -o-transition: all var(--transition-time);
-  transition: all var(--transition-time);
   max-width: 60vmin;
 }
 
