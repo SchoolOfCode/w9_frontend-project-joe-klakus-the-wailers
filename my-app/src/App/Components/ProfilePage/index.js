@@ -1,6 +1,6 @@
 import React from "react";
-import LittleGreenButton from "../Button/LittleGreenButtonIndex";
-import LittleRedButton from "../Button/LittleRedButtonindex";
+import LittleConstructiveButton from "../Button/LittleConstructiveButtonIndex";
+import LittleDestructiveButton from "../Button/LittleDestructiveButtonindex";
 import FormInput from "../InputTypeText/Input-Index";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
@@ -115,7 +115,7 @@ const ProfilePage = ({ id }) => {
       <div className="login-inputs">
         <h1 className="h1-styling">My Profile</h1>
         <div className="profile-page-button-and-icon-spacing">
-          <LittleRedButton
+          <LittleDestructiveButton
             handleClick={toggleDisable}
             className="little-red-button"
             buttonText={"Edit Profile"}
@@ -209,7 +209,7 @@ const ProfilePage = ({ id }) => {
         <br></br>
         <br></br>
         <br></br>
-        <LittleGreenButton
+        <LittleConstructiveButton
           className="little-green-button"
           buttonText={"Save Changes"}
         />
@@ -219,7 +219,7 @@ const ProfilePage = ({ id }) => {
         <h1 className="login-error-message">{createEventError}</h1>
         <br></br>
  
-        <LittleRedButton
+        <LittleDestructiveButton
           handleClick={deleteToken}
           className="little-red-button"
           buttonText={"Log Out"}
