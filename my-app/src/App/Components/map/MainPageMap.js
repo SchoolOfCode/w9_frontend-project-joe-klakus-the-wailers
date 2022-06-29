@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function MainPageMap(props) {
   const [posi, setPosi] = useState();
-//Gets the user's location on the browser
+  //Gets the user's location on the browser
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((location) =>
       setPosi([location.coords.latitude, location.coords.longitude])

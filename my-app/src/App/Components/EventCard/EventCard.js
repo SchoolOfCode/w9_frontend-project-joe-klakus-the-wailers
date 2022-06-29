@@ -1,6 +1,6 @@
 import React from "react";
 import LittleConstructiveButton from "../Button/LittleConstructiveButtonIndex";
-import TinyConstructiveButton from "../Button/TinyConstructiveButtonIndex"
+import TinyConstructiveButton from "../Button/TinyConstructiveButtonIndex";
 import TinyDestructiveButton from "../Button/TinyDestructiveButtonIndex";
 import { useState } from "react";
 
