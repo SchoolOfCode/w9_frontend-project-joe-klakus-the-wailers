@@ -26,5 +26,5 @@ test("test if name_of_event, description and button renders properly", () => {
                 // town={'someValue'} />);
    expect(screen.getByText('This is the event Name')).toBeDefined();
    expect(screen.getByText('This is a description')).toBeDefined();
-   expect(screen.getByRole('button')).toHaveClass('little-green-button');
+   expect(screen.getByRole('button')).toHaveClass('little-constructive-button');
 });
