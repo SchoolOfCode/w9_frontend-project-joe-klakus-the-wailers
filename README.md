@@ -58,16 +58,30 @@ Features That Need Work:
 - Converting post code into cordinates and map pinning
 
 
-## Color Reference - All CSS is in App.css
+## Color Reference
 
-| Color             | Hex                                                                |
+We have created buttons called Constructive Destructive and Neutral. Effectively it is based on the job the button does:
+
+-Constructive generally creates something (A new User, Event or Log In)
+
+-Destructive generally destroys something (Log Out, Delete or Edit Account)
+
+-Neutral is more to do with updating. (Uploading a new picture or logo)
+
+The colours below we hope will explain which is which and what there jobs are in terms of UI/UX
+
+All of Our CSS is in one file (App.css) search through using cntrl + F or cmd + F then search for the styling you want, it is named semantically so to search for the logo styling type in logo and you will be taken to the correct styling section.
+
+| Color Variable Name            | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| --primary-blue | ![#003049](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| --primary-green | ![#0b6e4f](https://via.placeholder.com/10/0b6e4f?text=+) #0b6e4f |
-| --primary-orange | ![#fa9f42](https://via.placeholder.com/10/fa9f42?text=+) #fa9f42 |
-| --primary-red | ![#d62828](https://via.placeholder.com/10/d62828?text=+) #00d1a0 |
-| --secondary-red | ![#7a1616](https://via.placeholder.com/10/7a1616?text=+) #00d1a0 |
-| --primary-grey | ![#e0e0e2](https://via.placeholder.com/10/e0e0e2?text=+) #00d1a0 |
+| --primary-text-colour | ![#003049](https://via.placeholder.com/10/003049?text=+) #003049 |
+|  --constructive-button-colour | ![#0b6e4f](https://via.placeholder.com/10/0b6e4f?text=+) #0b6e4f |
+| --neutral-button-colour | ![#fa9f42](https://via.placeholder.com/10/fa9f42?text=+) #fa9f42 |
+| --destructive-button-colour | ![#d62828](https://via.placeholder.com/10/7a1616?text=+) #d62828 |
+| --visited-link-colour | ![#7a1616](https://via.placeholder.com/10/00b48a?text=+) #7a1616 |
+|  --secondary-text-colour | ![#e0e0e2](https://via.placeholder.com/10/e0e0e2?text=+) #e0e0e2 |
+| --white | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) #ffffff |
+|
 
 
 
