@@ -1,7 +1,7 @@
 import React from "react";
 import FormInput from "../InputTypeText/Input-Index";
-import GreenButton from "../Button/GreenButtonIndex";
-import OrangeButton from "../Button/OrangeButtonIndex";
+import ConstructiveButton from "../Button/ConstructiveButtonIndex";
+import NeutralButton from "../Button/NeutralButtonIndex";
 import "../../App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -86,7 +86,7 @@ const Login = () => {
         <br></br>
         <br></br>
         <br></br>
-        <GreenButton
+        <ConstructiveButton
           handleClick={(e) => {
             e.preventDefault();
             submitUser();
@@ -97,7 +97,7 @@ const Login = () => {
         <br></br>
         <br></br>
         <Link to="/newUserPage">
-          <OrangeButton
+          <NeutralButton
             className="orange-button"
             buttonText={"Create Account"}
           />
@@ -106,7 +106,7 @@ const Login = () => {
         <p id="guest-login-prompt">
           Dont want an Account? <br></br>Click Below.
         </p>
-        <GreenButton
+        <ConstructiveButton
           type={"submit"}
           handleClick={() => {
             navigate("/mainPage");

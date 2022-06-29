@@ -1,6 +1,6 @@
 import React from "react";
-import GreenButton from "../Button/GreenButtonIndex";
-import OrangeButton from "../Button/OrangeButtonIndex";
+import ConstructiveButton from "../Button/ConstructiveButtonIndex";
+import NeutralButton from "../Button/NeutralButtonIndex";
 import FormInput from "../InputTypeText/Input-Index";
 import LargeFormInput from "../InputTypeText/LargeInput";
 import { useState } from "react";
@@ -164,7 +164,7 @@ const CreateEvent = (props) => {
           />
 
           <p className="create-account-styling">Event Logo:</p>
-          <OrangeButton
+          <NeutralButton
             className="orange-button"
             buttonText={"Upload from your Device"}
           />
@@ -175,7 +175,7 @@ const CreateEvent = (props) => {
             </h1>
           ))}
           <br></br>
-          <GreenButton
+          <ConstructiveButton
             handleClick={(e) => {
               e.preventDefault();
               submitEvent();
