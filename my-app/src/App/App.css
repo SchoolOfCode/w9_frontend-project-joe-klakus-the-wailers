@@ -266,7 +266,7 @@
 .forgotten-password-link {
   font-family: var(--font);
   font-size: 2.5vmin;
-  color: var(--destructive-button-colour;
+  color: var(--destructive-button-colour);
  
 }
 .forgotten-password-link:visited {
