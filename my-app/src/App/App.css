@@ -13,13 +13,6 @@
   --transition-time: 0, 2s;
   --white: white;
 }
-/* ------------------------------------------------------------- */
-.transitions{
-
-}
-
-
-/* ------------------------------------------------------------- */
 /* APP STYLING */
 
 .app {
@@ -125,25 +118,7 @@
 /* ------------------------------------------------------------- */
 
 /* ALL  BUTTON STYLING */
-.green-button:hover {
-  opacity: 0.8;
-}
-.orange-button:hover {
-  opacity: 0.8;
-}
-.red-button:hover {
-  opacity: 0.8;
-}
-.little-green-button:hover {
-  opacity: 0.8;
-}
-.little-red-button:hover {
-  opacity: 0.8;
-}
-.tiny-green-button:hover {
-  opacity: 0.8;
-}
-.tiny-red-button:hover {
+[class*="button"]:hover {
   opacity: 0.8;
 }
 
@@ -286,7 +261,6 @@
 .login-inputs {
   display: inline-block;
   justify-content: flex-start;
-  /* background-color: #61dafb; */
 }
 
 .forgotten-password-link {
