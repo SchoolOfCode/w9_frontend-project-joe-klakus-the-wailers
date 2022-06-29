@@ -1,6 +1,6 @@
 import React from 'react'
-import OrangeButton from '../Button/OrangeButtonIndex'
-import GreenButton from '../Button/GreenButtonIndex'
+import NeutralButton from '../Button/NeutralButtonIndex'
+import ConstructiveButton from '../Button/ConstructiveButtonIndex'
 import FormInput from '../InputTypeText/Input-Index'
 import { useState } from 'react';
 import {useNavigate} from "react-router"
@@ -72,13 +72,13 @@ const CreateUser = () => {
            <br></br>
            <FormInput handleChange={handleChange} name="postcode" placeholder="Postcode" />
            <p className="create-account-styling">Profile Picture:</p>
-           <OrangeButton className="orange-button" buttonText={"Upload from your Device"}/>
+           <NeutralButton className="orange-button" buttonText={"Upload from your Device"}/>
            <br></br>
            {createUError.map((error) => (
             <h1 className='login-error-message'>{error.param + ' ' + error.msg}</h1>
             ))}
            <br></br>
-           <GreenButton type={'submit'} handleClick={(e)=>{e.preventDefault(); submitUser()}} className="green-button" buttonText={"Create User"} />
+           <ConstructiveButton type={'submit'} handleClick={(e)=>{e.preventDefault(); submitUser()}} className="green-button" buttonText={"Create User"} />
          </form>
         </div>
     )

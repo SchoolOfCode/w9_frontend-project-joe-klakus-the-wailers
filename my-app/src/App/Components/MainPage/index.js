@@ -1,5 +1,5 @@
 import React from "react";
-import GreenButton from "../Button/GreenButtonIndex";
+import ConstructiveButton from "../Button/ConstructiveButtonIndex";
 import FormInput from "../InputTypeText/Input-Index";
 import EventCard from "../EventCard/EventCard";
 import MainPageMap from "../Map/MainPageMap.js";
@@ -86,7 +86,7 @@ const MainPage = ({ id, token }) => {
       <br></br>
       {token ? (
         <Link to="/newEventPage">
-          <GreenButton className="green-button" buttonText={"Add an Event"} />
+          <ConstructiveButton className="green-button" buttonText={"Add an Event"} />
         </Link>
       ) : (
         ""

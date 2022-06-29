@@ -1,7 +1,7 @@
 import React from "react";
-import LittleGreenButton from "../Button/LittleGreenButtonIndex.js";
-import TinyGreenButton from "../Button/TinyGreenButtonIndex";
-import TinyRedButton from "../Button/TinyRedButtonIndex";
+import LittleConstructiveButton from "../Button/LittleConstructiveButtonIndex";
+import TinyConstructiveButton from "../Button/TinyConstructiveButtonIndex"
+import TinyDestructiveButton from "../Button/TinyDestructiveButtonIndex";
 import { useState } from "react";
 
 const EventCard = (props) => {
@@ -53,12 +53,12 @@ const EventCard = (props) => {
           <p style={{ display: visible }} className="attending-heading">
             Attending?
           </p>
-          <TinyGreenButton
+          <TinyConstructiveButton
             style={{ display: visible }}
             className="tiny-green-button"
             buttonText={"Yes"}
           />
-          <TinyRedButton
+          <TinyDestructiveButton
             style={{ display: visible }}
             className="tiny-red-button"
             buttonText={"No"}
@@ -71,7 +71,7 @@ const EventCard = (props) => {
         <p style={{ display: visible }} className="description-box">
           {props.description}
         </p>
-        <LittleGreenButton
+        <LittleConstructiveButton
           style={{ display: visible }}
           className="little-green-button"
           buttonText={"Get Tickets"}

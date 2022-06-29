@@ -3,12 +3,12 @@
 /* VARIABLES */
 
 :root {
-  --primary-blue: #003049;
-  --primary-green: #0b6e4f;
-  --primary-orange: #fa9f42;
-  --primary-red: #d62828;
-  --secondary-red: #7a1616;
-  --primary-grey: #e0e0e2;
+  --primary-text-colour: #003049;
+  --constructive-button-colour: #0b6e4f;
+  --neutral-button-colour: #fa9f42;
+  --destructive-button-colour: #d62828;
+  --visited-link-colour: #7a1616;
+  --secondary-text-colour: #e0e0e2;
   --font: "Bitter", serif;
   --transition-time: 0, 2s;
   --white: white;
@@ -32,7 +32,7 @@
 
 .h1-styling {
   font-size: 6vmin;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -41,7 +41,7 @@
 /* LOGIN ERROR STYLING */
 .login-error-message {
   font-size: 3vmin;
-  color: var(--primary-red);
+  color: var(--destructive-button-colour);
 }
 
 /* ------------------------------------------------------------- */
@@ -59,17 +59,17 @@
   font-family: var(--font);
   font-size: 4vmin;
   text-align: center;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   margin: 0px;
 }
 
 .expanded-event-container {
-  background-color: var(--primary-orange);
-  color: var(--primary-blue);
+  background-color: var(--neutral-button-colour);
+  color: var(--primary-text-colour);
   border-radius: 10px;
   width: 60vmin;
   text-align: center;
-  border: 2px solid var(--primary-blue);
+  border: 2px solid var(--primary-text-colour);
   display: inline-block;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -82,7 +82,7 @@
   font-family: var(--font);
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   text-align: center;
   font-size: 3vmin;
   padding: 2vmin;
@@ -122,10 +122,10 @@
   opacity: 0.8;
 }
 
-.green-button {
+.constructive-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-green);
+  background: var(--constructive-button-colour);
   display: inline-block;
   border-radius: 10px;
   color: var(--white);
@@ -140,13 +140,13 @@
   transition: 0.3s;
 }
 
-.orange-button {
+.neutral-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-orange);
+  background: var(--neutral-button-colour);
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   text-align: center;
   font-size: 3vmin;
 
@@ -159,10 +159,10 @@
   transition: 0.3s;
 }
 
-.red-button {
+.destructive-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-red);
+  background: var(--destructive-button-colour);
   display: inline-block;
   border-radius: 10px;
   color: var(--white);
@@ -177,10 +177,10 @@
   transition: 0.3s;
 }
 
-.little-red-button {
+.little-destructive-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-red);
+  background: var(--destructive-button-colour);
   display: inline-block;
   border-radius: 10px;
   color: var(--white);
@@ -194,10 +194,10 @@
   transition: 0.3s;
 }
 
-.little-green-button {
+.little-constructive-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-green);
+  background: var(--constructive-button-colour);
   display: inline-block;
   border-radius: 10px;
   color: var(--white);
@@ -212,10 +212,10 @@
   transition: 0.3s;
 }
 
-.tiny-green-button {
+.tiny-constructive-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-green);
+  background: var(--constructive-button-colour);
   display: inline-block;
   border-radius: 10px;
   color: var(--white);
@@ -231,10 +231,10 @@
   transition: 0.3s;
 }
 
-.tiny-red-button {
+.tiny-destructive-button {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-red);
+  background: var(--destructive-button-colour);
   display: inline-block;
   border-radius: 10px;
   color: var(--white);
@@ -256,7 +256,7 @@
 #guest-login-prompt {
   font-family: var(--font);
   font-size: 2.5vmin;
-  color: var(--primary-blue);}
+  color: var(--primary-text-colour);}
 
 .login-inputs {
   display: inline-block;
@@ -266,13 +266,13 @@
 .forgotten-password-link {
   font-family: var(--font);
   font-size: 2.5vmin;
-  color: var(--primary-red);
+  color: var(--destructive-button-colour;
  
 }
 .forgotten-password-link:visited {
   font-family: var(--font);
   font-size: 2.5vmin;
-  color: var(--secondary-red);
+  color: var(--visited-link-colour);
 }
 /* ------------------------------------------------------------- */
 /* TEXT INPUT STYLING (PRIMARY) */
@@ -281,9 +281,9 @@
   font-family: var(--font);
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-blue);
-  border-color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
+  color: var(--primary-text-colour);
+  border-color: var(--primary-text-colour);
+  border: 2px solid var(--primary-text-colour);
   font-size: 4vmin;
   padding: 2vmin;
   width: 75vmin;
@@ -300,7 +300,7 @@
   font-size: 4vmin;
   text-align: left;
   padding: left 5vmin;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   padding-left: 25px;
 }
 
@@ -311,9 +311,9 @@
   font-family: var(--font);
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-blue);
-  border-color: var(--primary-blue);
-  border: 4px double var(--primary-blue);
+  color: var(--primary-text-colour);
+  border-color: var(--primary-text-colour);
+  border: 4px double var(--primary-text-colour);
   font-size: 4vmin;
   padding: 2vmin;
   width: 75vmin;
@@ -327,7 +327,7 @@
   background: white;
   display: inline-block;
   border-radius: 10px;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   text-align: center;
   font-size: 4vmin;
   width: 45vmin;
@@ -363,7 +363,7 @@
 .profile-icon {
   font-weight: bold;
   font-family: var(--font);
-  background: var(--primary-green);
+  background: var(--primary-text-colour);
   display: inline-block;
   border-radius: 100px;
   color: var(--white);
@@ -421,7 +421,7 @@
   overflow: hidden;
   outline: none;
   border-radius: 10px;
-  color: var(--primary-blue);
+  color: var(--primary-text-colour);
   text-align: left;
   font-size: 3vmin;
   padding: 2vmin;
